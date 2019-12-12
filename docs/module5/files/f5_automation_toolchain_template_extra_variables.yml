@@ -1,0 +1,19 @@
+---
+# Credentials
+BIGIPadminUsername: "admin"
+BIGIPadminPassword: "admin"
+
+# Used for Declarative Onboarding
+deviceName1: "10.1.1.8"
+deviceName2: "10.1.1.10"
+
+# Used for Application Services 3
+partition: "Module_03"
+serviceName: "Module_03"
+virtualAddresses1: "10.1.10.110"
+virtualAddresses2: "10.1.10.111"
+servicePort: "8081"
+
+# Used for Telemetry Streaming
+forwarderName: "tsdemo"
+consumerPort: "9092"

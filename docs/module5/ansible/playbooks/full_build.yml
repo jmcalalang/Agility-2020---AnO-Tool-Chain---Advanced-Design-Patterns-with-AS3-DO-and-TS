@@ -1,0 +1,7 @@
+---
+-
+  hosts: localhost
+  roles:
+    - declarative_onboarding
+    - application_services_3
+    - telemetry_streaming
