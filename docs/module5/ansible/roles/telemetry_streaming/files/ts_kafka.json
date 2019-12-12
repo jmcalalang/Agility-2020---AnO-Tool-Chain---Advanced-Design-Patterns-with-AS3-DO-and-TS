@@ -1,5 +1,6 @@
 {
-    "$schema": "https://raw.githubusercontent.com/F5Networks/f5-telemetry-streaming/master/src/nodejs/schema/base_schema.json",
+    "$schema": "https://raw.githubusercontent.com/F5Networks/f5-telemetry-streaming/v1.8.0/src/schema/1.8.0/base_schema.json",
+    "schemaVersion": "1.8.0",
     "class": "Telemetry",
     "controls": {
         "class": "Controls",

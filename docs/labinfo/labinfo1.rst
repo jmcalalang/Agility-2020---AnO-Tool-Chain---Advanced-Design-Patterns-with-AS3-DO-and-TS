@@ -1,7 +1,7 @@
 Lab Information
 ===============
 
-Access into the lab environment and all work are through the **Windows Server 2016** jump host provided. 
+Access into the lab environment and all work are through the **Win 10 Jumphost** jump host provided. 
 
 .. Warning:: You need to have outbound access from your system allowing Microsoft Remote Desktop Protocol.
 
@@ -10,18 +10,14 @@ Lab Topology
 
 - 1 x Windows Jumphost
 - 1 x Ansible Tower
-- 1 x Ubuntu Server
-    - LAMP
-    - Radius
-    - RDP
+- 1 x Docker Host
     - Docker
-        - DVWA
-        - Hack-a-Zon
-        - f5 http demo
-        - wurstmeister Kafka/zookeeper
+        - NGiNX
+        - Juice Shop
+        - Hashicorp Consul
+        - GitLab
 - 2 x BIG-IP
 - 1 x BIG-IQ Centralized Manager
-- 1 x BIG-IQ Data Collection Device (future use)
 
 Network Addressing
 ------------------
@@ -40,49 +36,43 @@ components:
      - **Credentials**
 
    * - Win 7 Jumphost
-     - DHCP
-     - **External:** 10.1.10.3
+     - 10.1.1.10
+     - **External:** 10.1.10.10
      - student/automation
 
-   * - Ubuntu 18.04 Server
-     - 10.1.1.5
-     - **External:** 10.1.10.5
-       **Internal:** 10.1.20.5
-     - f5student/purple123
+   * - Docker Host
+     - 10.1.1.11
+     - **External:** 10.1.10.11
+       **Internal:** 10.1.20.11
+     - mTLS
 
    * - Ansible Tower
-     - 10.1.1.12
+     - 10.1.1.8
      - **External:** NA
        **Internal:** NA
-     - admin/admin
+     - admin/password
 
-   * - BIGIQ v6.1 CM
+   * - BIGIQ v7.0 CM
      - 10.1.1.4
      - **External:** 10.1.10.4
        **Internal:** 10.1.20.4
-     - admin/purple123
+     - admin/MasterPassphrase123!
 
-   * - BIGIQ v6.1 DCD
-     - 10.1.1.6
-     - **External:** 10.1.10.6
-       **Internal:** 10.1.20.6
-     - admin/purple123
-
-   * - BIGIP01 v13.1
-     - 10.1.1.8
-     - **External:** 10.1.10.8
-       **Internal:** 10.1.20.8
-       **External Float** 10.1.10.11
-       **Internal Float** 10.1.20.11
+   * - BIGIP01 v14.1.0.3-0.0.6
+     - 10.1.1.7
+     - **External:** 10.1.10.7
+       **Internal:** 10.1.20.7
+       **External Float** 10.1.10.100
+       **Internal Float** 10.1.20.100
      - admin/admin
        root/default
 
-   * - BIGIP02 v13.1
-     - 10.1.1.10
-     - **External:** 10.1.10.10
-       **Internal:** 10.1.20.10
-       **External Float** 10.1.10.11
-       **Internal Float** 10.1.20.11
+   * - BIGIP02 v14.1.0.3-0.0.6
+     - 10.1.1.6
+     - **External:** 10.1.10.6
+       **Internal:** 10.1.20.6
+       **External Float** 10.1.10.100
+       **Internal Float** 10.1.20.100
      - admin/admin
        root/default
 

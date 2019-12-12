@@ -15,11 +15,11 @@ Task |labmodule|\.\ |labnum|\.1
 
 Begin by connecting to your lab environment portal. From the portal, you have a view of the components within the lab.
 
-From the portal find your `Win 7 Jumphost`, open using the RDP Access method.
+From the portal find your `Win 10 Jumphost`, open using the RDP Access method.
 
 .. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources. RDP can be blocked with always-on VPN services or firewalls.
 
-Credentials for the `Win 7 Jumphost`:
+Credentials for the `Win 10 Jumphost`:
 
 - Username:``student``
 - Password:``automation``

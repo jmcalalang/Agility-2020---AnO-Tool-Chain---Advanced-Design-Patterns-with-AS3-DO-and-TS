@@ -118,18 +118,20 @@ Mutation of objects and creating reusable items.
 
 Template systems with single configuration files can lead to many **Snow-Flake** configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how an AS3 solution could be reused, we are going to change some of the extra variables in our Template creating additional services. 
 
-This lab is currently running 3 different applications. Through this point of the lab, we have been exposing the `F5 Hello World` application; we are now going to use the same template to deploy services to expose the `Hackazon` and `DVWA` applications.
+This lab is currently running 4 different applications. Through this point of the lab, we have been exposing the `NGiNX` application; we are now going to use the same template to deploy services to expose the `JuiceShop`, `consul` and `GitLab` applications.
 
 This Table represents the applications and extra variables we will use to create our additional deployments.
 
 +--------------------+-----------+-------------------+-------------------+-------------+
 | **serviceName**    | partition | virtualAddresses1 | virtualAddresses2 | servicePort |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **Module_03**      | Module_03 | 10.1.10.110       | 10.1.10.111       | 8081        |
+| **Module_03**      | Module_03 | 10.1.10.110       | 10.1.10.111       | 8080        |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **Hackazon**       | Hackazon  | 10.1.10.112       | 10.1.10.113       | 80          |
+| **JuiceShop**      | JuiceShop | 10.1.10.112       | 10.1.10.113       | 8081        |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **DVWA**           | DVWA      | 10.1.10.114       | 10.1.10.115       | 8082        |
+| **consul**         | consul    | 10.1.10.114       | 10.1.10.115       | 8500        |
++--------------------+-----------+-------------------+-------------------+-------------+
+| **GitLab**         | GitLab    | 10.1.10.114       | 10.1.10.115       | 8501        |
 +--------------------+-----------+-------------------+-------------------+-------------+
 
 Return to the `f5_automation_toolchain_template` in Ansible Tower.
