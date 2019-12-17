@@ -50,7 +50,7 @@ components:
      - 10.1.1.8
      - **External:** NA
        **Internal:** NA
-     - admin/password
+     - admin/admin
 
    * - BIGIQ v7.0 CM
      - 10.1.1.4
@@ -64,8 +64,8 @@ components:
        **Internal:** 10.1.20.7
        **External Float** 10.1.10.100
        **Internal Float** 10.1.20.100
-     - admin/admin
-       root/default
+     - admin/Agility2020!
+       root/Agility2020!
 
    * - BIGIP02 v14.1.0.3-0.0.6
      - 10.1.1.6
@@ -73,8 +73,8 @@ components:
        **Internal:** 10.1.20.6
        **External Float** 10.1.10.100
        **Internal Float** 10.1.20.100
-     - admin/admin
-       root/default
+     - admin/Agility2020!
+       root/Agility2020!
 
 .. Note:: In order for Postman to store objects dynamically f5-postman-workflows_ have been installed on the jumphost, this is an extension to Postman utilizing `Tests` objects.
 

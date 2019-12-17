@@ -16,7 +16,7 @@
             "licensePool": "ve-pool",
             "reachable": true,
             "bigIpUsername": "admin",
-            "bigIpPassword": "admin",
+            "bigIpPassword": "Agility2020!",
             "overwrite": true
         },
         "myDns": {
@@ -40,19 +40,19 @@
         "root": {
             "class": "User",
             "userType": "root",
-            "oldPassword": "default",
-            "newPassword": "default"
+            "oldPassword": "Agility2020!",
+            "newPassword": "Agility2020!"
         },
         "admin": {
             "class": "User",
             "userType": "regular",
-            "password": "admin",
+            "password": "Agility2020!",
             "shell": "bash"
         },
         "anotherUser": {
             "class": "User",
             "userType": "regular",
-            "password": "foobar",
+            "password": "Agility2020!",
             "partitionAccess": {
                 "Common": {
                     "role": "guest"
@@ -144,10 +144,10 @@
         "trust": {
             "class": "DeviceTrust",
             "localUsername": "admin",
-            "localPassword": "admin",
+            "localPassword": "Agility2020!",
             "remoteHost": "10.1.20.6",
             "remoteUsername": "admin",
-            "remotePassword": "admin"
+            "remotePassword": "Agility2020!"
         }
     }
 }

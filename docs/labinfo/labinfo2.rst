@@ -50,7 +50,7 @@ Choose `Import from Link`:
 
 Copy the collection path and import into Postman:
 
-``https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_collection.json``
+``https://raw.githubusercontent.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_collection.json``
 
 Task |labmodule|\.\ |labnum|\.4
 -------------------------------
@@ -65,7 +65,7 @@ Choose `Import from Link`:
 
 Copy the environment path and import into Postman:
 
-``https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_environment.json``
+``https://raw.githubusercontent.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_environment.json``
 
 
 Task |labmodule|\.\ |labnum|\.5

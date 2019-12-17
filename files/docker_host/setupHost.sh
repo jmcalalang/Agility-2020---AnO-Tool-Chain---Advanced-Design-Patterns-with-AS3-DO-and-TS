@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Notes
+# - Need to change the Tower Password to "admin"
+# - Need to turn off ssl cert verification in Postman
+# - Default passwords for BIG-IP's?
+# - Create Bookmarks
+# - Get different license pool?
+
+
 # Update Host
 sudo yum -y update
 
