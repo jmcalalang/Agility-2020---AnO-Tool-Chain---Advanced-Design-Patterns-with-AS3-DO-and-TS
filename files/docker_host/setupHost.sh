@@ -1,9 +1,19 @@
 #!/bin/bash
 
+# Update Host
+sudo yum -y update
+
+# Install GIT
+sudo yum install git
+
+# Git working repository
+wget https://github.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS
+
 # Install Docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo systemctl start docker
+sudo service docker start
 sudo usermod -aG docker cloud-user
 echo -e "Default \e[34mDocker installed\e[0m"
 
@@ -47,4 +57,4 @@ cat > ~/Container_Content/nginx_html/index.html <<- "EOF"
 
 </html>"
 EOF
-echo -e "Default \e[92mNGiNX static page created\e[0m"
+echo -e "Default \e[98mNGiNX static page created\e[0m"
