@@ -8,7 +8,7 @@
     password: "{{BIGIPadminPassword}}"
     server: "{{deviceName1}}"
     user: "{{BIGIPadminUsername}}"
-    validate_certs: no
+#    validate_certs: no
   delegate_to: localhost
 
 - name: Get BIG-IP Authentication Token from {{deviceName1}}
@@ -19,7 +19,7 @@
     method: POST
     url: "https://{{deviceName1}}/mgmt/shared/authn/login"
     status_code: 200
-    validate_certs: no
+#    validate_certs: no
   register: bigip1_auth_response
   retries: 30
   delay: 5
@@ -36,7 +36,7 @@
       X-F5-Auth-Token: "{{ bigip1_auth_token }}"
     method: GET
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding/available"
-    validate_certs: no
+#    validate_certs: no
   retries: 30
   delay: 5
   register: result
@@ -56,7 +56,7 @@
     method: POST
     status_code: 202
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
-    validate_certs: no
+#    validate_certs: no
 
 - name: Wait for Sync to happen or race condition will occur
   pause:
@@ -70,7 +70,7 @@
     password: "{{BIGIPadminPassword}}"
     server: "{{deviceName2}}"
     user: "{{BIGIPadminUsername}}"
-    validate_certs: no
+#    validate_certs: no
   delegate_to: localhost
 
 - name: Get BIG-IP Authentication Token from {{deviceName2}}
@@ -81,7 +81,7 @@
     method: POST
     url: "https://{{deviceName2}}/mgmt/shared/authn/login"
     status_code: 200
-    validate_certs: no
+#    validate_certs: no
   register: bigip2_auth_response
   retries: 30
   delay: 5
@@ -98,7 +98,7 @@
       X-F5-Auth-Token: "{{ bigip2_auth_token }}"
     method: GET
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding/available"
-    validate_certs: no
+#    validate_certs: no
   retries: 30
   delay: 5
   register: result
@@ -118,4 +118,4 @@
     method: POST
     status_code: 202
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
-    validate_certs: no
+#    validate_certs: no

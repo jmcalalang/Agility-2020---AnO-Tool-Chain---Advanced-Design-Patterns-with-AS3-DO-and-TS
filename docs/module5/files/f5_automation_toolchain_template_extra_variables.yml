@@ -1,7 +1,7 @@
 ---
 # Credentials
 BIGIPadminUsername: "admin"
-BIGIPadminPassword: "admin"
+BIGIPadminPassword: "Agility2020!"
 
 # Used for Declarative Onboarding
 deviceName1: "10.1.1.7"
@@ -12,7 +12,7 @@ partition: "Module_03"
 serviceName: "Module_03"
 virtualAddresses1: "10.1.10.110"
 virtualAddresses2: "10.1.10.111"
-servicePort: "8081"
+servicePort: "8080"
 
 # Used for Telemetry Streaming
 forwarderName: "tsdemo"

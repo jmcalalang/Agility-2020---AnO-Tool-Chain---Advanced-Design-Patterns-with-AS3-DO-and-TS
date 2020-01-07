@@ -3,14 +3,32 @@
 # Notes
 
 # - Need to change the Tower Password to "admin"
+# - Need to setup tower - fix the SCM https://github.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS - fix the 
 # - Need to turn off ssl cert verification in Postman
 # - Default passwords for BIG-IP's?
 # - Create Bookmarks
-# - Get different license pool?
+# - Get License Pool - F5-BIG-VEP7-1G-4-V13-LIC
+# - Update the linux host
+
+# Create Ethernet 1
+# cat > /etc/sysconfig/network-scripts/ifcfg-eth1 <<- "EOF"
+# DEVICE="eth1"
+# BOOTPROTO="dhcp"
+# ONBOOT="yes"
+# TYPE="Ethernet"
+# EOF
+
+# Create Ethernet 2
+# cat > /etc/sysconfig/network-scripts/ifcfg-eth2 <<- "EOF"
+# DEVICE="eth2"
+# BOOTPROTO="dhcp"
+# ONBOOT="yes"
+# TYPE="Ethernet"
+# EOF
 
 
 # Update Host
-sudo yum -y update
+# sudo yum -y update
 
 # Install GIT
 sudo yum install git
@@ -60,7 +78,7 @@ cat > ~/Container_Content/nginx_html/index.html <<- "EOF"
 
 <body>
 
-  <img src="https://f5-automation-toolchain-lab.readthedocs.io/en/latest/_images/image1.png" alt="f5.com">
+  <img src="https://raw.githubusercontent.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS/master/docs/intro/images/image1.png" alt="f5.com">
 
 </body>
 
