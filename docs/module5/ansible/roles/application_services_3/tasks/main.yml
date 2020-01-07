@@ -9,7 +9,7 @@
       password: "{{BIGIPadminPassword}}"
       server: "{{deviceName1}}"
       user: "{{BIGIPadminUsername}}"
-    validate_certs: no
+      validate_certs: no
   delegate_to: localhost
 
 - name: Get BIG-IP Authentication Token from {{deviceName1}}
@@ -19,7 +19,7 @@
     body_format: json
     method: POST
     url: "https://{{deviceName1}}/mgmt/shared/authn/login"
-    status_code: 200
+    status_code: "200"
     validate_certs: no
   register: bigip1_auth_response
   retries: 30
@@ -55,6 +55,6 @@
     headers:
       X-F5-Auth-Token: "{{ bigip1_auth_token }}"
     method: POST
-    status_code: 200
+    status_code: "200"
     url: "https://{{deviceName1}}/mgmt/shared/appsvcs/declare"
     validate_certs: no
