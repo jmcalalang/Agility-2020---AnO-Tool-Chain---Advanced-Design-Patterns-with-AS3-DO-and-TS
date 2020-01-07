@@ -149,3 +149,7 @@
   retries: 30
   delay: 5
   until: "(bigip2_token_delete is successful) and (bigip2_token_delete.status == 200)"
+
+- name: Wait for Sync to happen or race condition will occur
+  pause:
+    seconds: 30
