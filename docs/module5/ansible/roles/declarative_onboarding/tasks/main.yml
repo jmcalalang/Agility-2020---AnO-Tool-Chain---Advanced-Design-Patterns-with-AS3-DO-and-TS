@@ -47,7 +47,7 @@
   template: src="{{ role_path }}/files/do_cluster_bigip1.json" dest="{{ role_path }}/files/{{ deviceName1 }}_declaration.json"
   delegate_to: localhost
 
-- name: Create or update {{ deviceName1 }}; Clustered declaration
+- name: Create or update {{ deviceName1 }}; DO Declaration
   delegate_to: localhost
   uri:
     body: "{{ lookup('file','{{ role_path }}/files/' + '{{ deviceName1 }}_declaration.json') }}"
@@ -58,6 +58,7 @@
     status_code: "202"
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+    timeout: "60"
 
 - name: Delete BIG-IP Authentication Token from {{deviceName1}}
   delegate_to: localhost
@@ -124,7 +125,7 @@
   template: src="{{ role_path }}/files/do_cluster_bigip2.json" dest="{{ role_path }}/files/{{ deviceName2 }}_declaration.json"
   delegate_to: localhost
 
-- name: Create or update {{ deviceName2 }}; Clustered declaration
+- name: Create or update {{ deviceName2 }}; DO Declaration
   delegate_to: localhost
   uri:
     body: "{{ lookup('file','{{ role_path }}/files/' + '{{ deviceName2 }}_declaration.json') }}"
@@ -135,6 +136,7 @@
     status_code: "202"
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+    timeout: "60"
 
 - name: Delete BIG-IP Authentication Token from {{deviceName1}}
   delegate_to: localhost

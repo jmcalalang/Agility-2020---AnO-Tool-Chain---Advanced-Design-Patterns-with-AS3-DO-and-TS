@@ -47,7 +47,7 @@
   template: src="{{ role_path }}/files/ts_kafka.json" dest="{{ role_path }}/files/{{ forwarderName }}_declaration.json"
   delegate_to: localhost
 
-- name: Create or update {{ forwarderName }}; AS3 Build Simple HTTP Application
+- name: Create or update {{ forwarderName }}; TS Declaration
   delegate_to: localhost
   uri:
     body: "{{ lookup('file','{{ role_path }}/files/' + '{{ forwarderName }}_declaration.json') }}"
@@ -58,6 +58,7 @@
     status_code: "200"
     url: "https://{{deviceName1}}/mgmt/shared/telemetry/declare"
     validate_certs: no
+    timeout: "60"
 
 - name: Delete BIG-IP Authentication Token from {{deviceName1}}
   delegate_to: localhost
