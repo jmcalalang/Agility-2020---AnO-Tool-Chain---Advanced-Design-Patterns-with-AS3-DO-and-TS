@@ -5,9 +5,10 @@
 - name: Wait a maximum of 300 seconds for BIG-IP to be ready to take configuration
   bigip_wait:
     timeout: 300
-    password: "{{BIGIPadminPassword}}"
-    server: "{{deviceName1}}"
-    user: "{{BIGIPadminUsername}}"
+    provider:
+      password: "{{BIGIPadminPassword}}"
+      server: "{{deviceName1}}"
+      user: "{{BIGIPadminUsername}}"
 #    validate_certs: no
   delegate_to: localhost
 
@@ -67,9 +68,10 @@
 - name: Wait a maximum of 300 seconds for BIG-IP to be ready to take configuration
   bigip_wait:
     timeout: 300
-    password: "{{BIGIPadminPassword}}"
-    server: "{{deviceName2}}"
-    user: "{{BIGIPadminUsername}}"
+    provider:
+      password: "{{BIGIPadminPassword}}"
+      server: "{{deviceName1}}"
+      user: "{{BIGIPadminUsername}}"
 #    validate_certs: no
   delegate_to: localhost
 
