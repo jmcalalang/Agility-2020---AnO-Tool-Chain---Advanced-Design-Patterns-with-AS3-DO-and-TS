@@ -59,6 +59,20 @@
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
 
+- name: Delete BIG-IP Authentication Token from {{deviceName1}}
+  delegate_to: localhost
+  uri:
+    headers:
+      X-F5-Auth-Token: "{{ bigip1_auth_token }}"
+    method: DELETE
+    url: "https://{{deviceName1}}/mgmt/shared/authz/tokens/{{ bigip1_auth_token }}"
+    status_code: "200"
+    validate_certs: no
+  register: bigip1_token_delete
+  retries: 30
+  delay: 5
+  until: "(bigip1_token_delete is successful) and (bigip1_token_delete.status == 200)"
+
 - name: Wait for Sync to happen or race condition will occur
   pause:
     seconds: 30
@@ -121,3 +135,17 @@
     status_code: "202"
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+
+- name: Delete BIG-IP Authentication Token from {{deviceName1}}
+  delegate_to: localhost
+  uri:
+    headers:
+      X-F5-Auth-Token: "{{ bigip2_auth_token }}"
+    method: DELETE
+    url: "https://{{deviceName2}}/mgmt/shared/authz/tokens/{{ bigip2_auth_token }}"
+    status_code: "200"
+    validate_certs: no
+  register: bigip2_token_delete
+  retries: 30
+  delay: 5
+  until: "(bigip2_token_delete is successful) and (bigip2_token_delete.status == 200)"

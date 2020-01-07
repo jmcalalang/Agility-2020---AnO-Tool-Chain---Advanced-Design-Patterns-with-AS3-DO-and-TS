@@ -58,3 +58,17 @@
     status_code: "200"
     url: "https://{{deviceName1}}/mgmt/shared/telemetry/declare"
     validate_certs: no
+
+- name: Delete BIG-IP Authentication Token from {{deviceName1}}
+  delegate_to: localhost
+  uri:
+    headers:
+      X-F5-Auth-Token: "{{ bigip1_auth_token }}"
+    method: DELETE
+    url: "https://{{deviceName1}}/mgmt/shared/authz/tokens/{{ bigip1_auth_token }}"
+    status_code: "200"
+    validate_certs: no
+  register: bigip1_token_delete
+  retries: 30
+  delay: 5
+  until: "(bigip1_token_delete is successful) and (bigip1_token_delete.status == 200)"
