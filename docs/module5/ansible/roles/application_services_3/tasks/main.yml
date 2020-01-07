@@ -19,7 +19,7 @@
     body_format: json
     method: POST
     url: "https://{{deviceName1}}/mgmt/shared/authn/login"
-    status_code: "200"
+    status_code: 200
     validate_certs: no
   register: bigip1_auth_response
   retries: 30
