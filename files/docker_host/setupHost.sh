@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Notes
+
 # - Need to change the Tower Password to "admin"
 # - Need to turn off ssl cert verification in Postman
 # - Default passwords for BIG-IP's?
