@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0aa7c0b6-b47e-4eb3-834f-a2930caeb3d5",
+		"_postman_id": "5686ebb3-e455-47cf-9857-0c6e3d915543",
 		"name": "F5 Automation Toolchain: Class",
 		"description": "This class is focused on highlighting the F5 Automation Toolchain objects and their specific uses.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -221,7 +221,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Module 2 - DO and BIG-IP",
@@ -262,10 +263,6 @@
 								"value": "{{bigip_1_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/iapp/installed-packages",
 							"protocol": "https",
@@ -460,10 +457,6 @@
 								"value": "{{bigip_1_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks/{{_do_install_uuid}}",
 							"protocol": "https",
@@ -520,10 +513,6 @@
 								"value": "keep-alive"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/declarative-onboarding/",
 							"protocol": "https",
@@ -633,10 +622,6 @@
 								"value": "{{bigip_2_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip2}}/mgmt/shared/iapp/installed-packages",
 							"protocol": "https",
@@ -831,10 +816,6 @@
 								"value": "{{bigip_2_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip2}}/mgmt/shared/iapp/package-management-tasks/{{_do_install_uuid}}",
 							"protocol": "https",
@@ -891,10 +872,6 @@
 								"value": "keep-alive"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip2}}/mgmt/shared/declarative-onboarding/",
 							"protocol": "https",
@@ -990,7 +967,8 @@
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Module 3 - AS3 and BIG-IP",
@@ -1031,10 +1009,6 @@
 								"value": "{{bigip_1_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/iapp/installed-packages",
 							"protocol": "https",
@@ -1229,10 +1203,6 @@
 								"value": "{{bigip_1_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks/{{_as3_install_uuid}}",
 							"protocol": "https",
@@ -1291,10 +1261,6 @@
 								"value": "keep-alive"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/appsvcs/info",
 							"protocol": "https",
@@ -1379,7 +1345,8 @@
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Module 4 - TS and BIG-IP",
@@ -1420,10 +1387,6 @@
 								"value": "{{bigip_1_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/iapp/installed-packages",
 							"protocol": "https",
@@ -1618,10 +1581,6 @@
 								"value": "{{bigip_1_auth_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks/{{_ts_install_uuid}}",
 							"protocol": "https",
@@ -1680,10 +1639,6 @@
 								"value": "keep-alive"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://{{bigip1}}/mgmt/shared/telemetry/info",
 							"protocol": "https",
@@ -1768,7 +1723,8 @@
 						]
 					}
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Module 5 - CI/CD with Ansible Tower",
@@ -1894,7 +1850,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"f5_automation_toolchain_project\",\n    \"scm_type\": \"git\",\n    \"scm_url\": \"https://github.com/jmcalalang/f5-automation-toolchain-lab\",\n    \"scm_branch\": null,\n    \"scm_clean\": false,\n    \"scm_delete_on_update\": true,\n    \"credential\": null,\n    \"timeout\": 0,\n    \"organization\": \"1\",\n    \"scm_update_on_launch\": true,\n    \"scm_update_cache_timeout\": 0\n}"
+									"raw": "{\n    \"name\": \"f5_automation_toolchain_project\",\n    \"scm_type\": \"git\",\n    \"scm_url\": \"https://github.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS\",\n    \"scm_branch\": null,\n    \"scm_clean\": false,\n    \"scm_delete_on_update\": true,\n    \"credential\": null,\n    \"timeout\": 0,\n    \"organization\": \"1\",\n    \"scm_update_on_launch\": true,\n    \"scm_update_cache_timeout\": 0\n}"
 								},
 								"url": {
 									"raw": "https://{{ansibletower}}/api/v2/projects/",
@@ -2099,7 +2055,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"f5_automation_toolchain_template\",\n    \"description\": \"\",\n    \"job_type\": \"run\",\n    \"inventory\": {{tower_inventory_id}},\n    \"project\": {{tower_project_id}},\n    \"playbook\": \"docs/module5/ansible/playbooks/full_build.yml\",\n    \"forks\": 0,\n    \"limit\": \"\",\n    \"verbosity\": 0,\n    \"extra_vars\": \"---\\n# Credentials\\nBIGIPadminUsername: \\\"admin\\\"\\nBIGIPadminPassword: \\\"admin\\\"\\n\\n# Used for Declarative Onboarding\\ndeviceName1: \\\"10.1.1.8\\\"\\ndeviceName2: \\\"10.1.1.10\\\"\\n\\n# Used for Application Services 3\\npartition: \\\"Module_03\\\"\\nserviceName: \\\"Module_03\\\"\\nvirtualAddresses1: \\\"10.1.20.150\\\"\\nvirtualAddresses2: \\\"10.1.20.151\\\"\\nservicePort: \\\"8081\\\"\\n\\n# Used for Telemetry Streaming\\nforwarderName: \\\"tsdemo\\\"\",\n    \"job_tags\": \"\",\n    \"force_handlers\": false,\n    \"skip_tags\": \"\",\n    \"start_at_task\": \"\",\n    \"timeout\": 0,\n    \"use_fact_cache\": false,\n    \"host_config_key\": \"\",\n    \"ask_diff_mode_on_launch\": false,\n    \"ask_variables_on_launch\": false,\n    \"ask_limit_on_launch\": false,\n    \"ask_tags_on_launch\": false,\n    \"ask_skip_tags_on_launch\": false,\n    \"ask_job_type_on_launch\": false,\n    \"ask_verbosity_on_launch\": false,\n    \"ask_inventory_on_launch\": false,\n    \"ask_credential_on_launch\": false,\n    \"survey_enabled\": false,\n    \"become_enabled\": false,\n    \"diff_mode\": false,\n    \"allow_simultaneous\": false,\n    \"custom_virtualenv\": null,\n    \"credential\": null,\n    \"vault_credential\": null\n}"
+									"raw": "{\n    \"name\": \"f5_automation_toolchain_template\",\n    \"description\": \"\",\n    \"job_type\": \"run\",\n    \"inventory\": {{tower_inventory_id}},\n    \"project\": {{tower_project_id}},\n    \"playbook\": \"docs/module5/ansible/playbooks/full_build.yml\",\n    \"forks\": 0,\n    \"limit\": \"\",\n    \"verbosity\": 0,\n    \"extra_vars\": \"---\\n# Credentials\\nBIGIPadminUsername: \\\"Agility2020!\\\"\\nBIGIPadminPassword: \\\"admin\\\"\\n\\n# Used for Declarative Onboarding\\ndeviceName1: \\\"10.1.1.7\\\"\\ndeviceName2: \\\"10.1.1.6\\\"\\n\\n# Used for Application Services 3\\npartition: \\\"Module_03\\\"\\nserviceName: \\\"Module_03\\\"\\nvirtualAddresses1: \\\"10.1.20.110\\\"\\nvirtualAddresses2: \\\"10.1.20.111\\\"\\nservicePort: \\\"8080\\\"\\n\\n# Used for Telemetry Streaming\\nforwarderName: \\\"tsdemo\\\"\",\n    \"job_tags\": \"\",\n    \"force_handlers\": false,\n    \"skip_tags\": \"\",\n    \"start_at_task\": \"\",\n    \"timeout\": 0,\n    \"use_fact_cache\": false,\n    \"host_config_key\": \"\",\n    \"ask_diff_mode_on_launch\": false,\n    \"ask_variables_on_launch\": false,\n    \"ask_limit_on_launch\": false,\n    \"ask_tags_on_launch\": false,\n    \"ask_skip_tags_on_launch\": false,\n    \"ask_job_type_on_launch\": false,\n    \"ask_verbosity_on_launch\": false,\n    \"ask_inventory_on_launch\": false,\n    \"ask_credential_on_launch\": false,\n    \"survey_enabled\": false,\n    \"become_enabled\": false,\n    \"diff_mode\": false,\n    \"allow_simultaneous\": false,\n    \"custom_virtualenv\": null,\n    \"credential\": null,\n    \"vault_credential\": null\n}"
 								},
 								"url": {
 									"raw": "https://{{ansibletower}}/api/v2/job_templates/",
@@ -2118,14 +2074,17 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Automation Toolchain Package Install Template",
 					"item": [],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [
@@ -2149,5 +2108,6 @@
 				]
 			}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
