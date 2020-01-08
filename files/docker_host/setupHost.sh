@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Fix image8 for module2
-# Fix image6 for module5
-# Fix image15 for module5
-# Fix image16 for module5
-
 # Create Ethernet 1
 # cat > /etc/sysconfig/network-scripts/ifcfg-eth1 <<- "EOF"
 # DEVICE="eth1"
