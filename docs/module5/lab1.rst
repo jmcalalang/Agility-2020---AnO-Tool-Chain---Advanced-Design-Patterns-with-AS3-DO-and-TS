@@ -27,7 +27,7 @@ Ansible Tower utilizing Projects connected to an SCM will parse a GitHub reposit
 Using `Chrome` open a tab to Ansible Tower.
 
 - Ansible Tower User: ``admin``
-- Ansible Tower Password: ``admin``
+- Ansible Tower Password: ``Agility2020!``
 
   |image3|
 
@@ -118,7 +118,7 @@ Mutation of objects and creating reusable items.
 
 Template systems with single configuration files can lead to many **Snow-Flake** configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how an AS3 solution could be reused, we are going to change some of the extra variables in our Template creating additional services. 
 
-This lab is currently running 4 different applications. Through this point of the lab, we have been exposing the `NGiNX` application; we are now going to use the same template to deploy services to expose the `JuiceShop`, `consul` and `GitLab` applications.
+This lab is currently running 4 different applications. Through this point of the lab, we have been exposing the `NGiNX` application; we are now going to use the same template to deploy services to expose the `JuiceShop` and `GitLab` applications.
 
 This Table represents the applications and extra variables we will use to create our additional deployments.
 
@@ -128,8 +128,6 @@ This Table represents the applications and extra variables we will use to create
 | **Module_03**      | Module_03 | 10.1.10.110       | 10.1.10.111       | 8080        |
 +--------------------+-----------+-------------------+-------------------+-------------+
 | **JuiceShop**      | JuiceShop | 10.1.10.112       | 10.1.10.113       | 8081        |
-+--------------------+-----------+-------------------+-------------------+-------------+
-| **consul**         | consul    | 10.1.10.114       | 10.1.10.115       | 8500        |
 +--------------------+-----------+-------------------+-------------------+-------------+
 | **GitLab**         | GitLab    | 10.1.10.114       | 10.1.10.115       | 8501        |
 +--------------------+-----------+-------------------+-------------------+-------------+
@@ -142,7 +140,7 @@ Located at the bottom of the template are the extra variables, **manipulate the 
 
 .. note:: The template is defaulted to run the **full_build.yml** playbook, if you want to save time you can set this to the **application_services_3.yml**.
 
-Save the Template with your new variables and playbook defined, then rerun the template.
+Save the Template with your new variables and playbook defined, then re-run the template.
 
   |image13|
 

@@ -27,7 +27,7 @@ Using `Chrome` open a tab to each BIG-IP system, they are currently in a default
 
 BIG-IP 1 and 2:
 Username: ``admin``
-Password: ``admin``
+Password: ``Agility2020!``
 
   |image8|
 

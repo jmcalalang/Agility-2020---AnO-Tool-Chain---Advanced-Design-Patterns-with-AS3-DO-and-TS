@@ -1,14 +1,9 @@
 #!/bin/bash
 
-# Notes
-
-# - Need to change the Tower Password to "admin"
-# - Need to setup tower - fix the SCM https://github.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS - fix the 
-# - Need to turn off ssl cert verification in Postman
-# - Default passwords for BIG-IP's?
-# - Create Bookmarks
-# - Get License Pool - F5-BIG-VEP7-1G-4-V13-LIC
-# - Update the linux host
+# Fix image8 for module2
+# Fix image6 for module5
+# Fix image15 for module5
+# Fix image16 for module5
 
 # Create Ethernet 1
 # cat > /etc/sysconfig/network-scripts/ifcfg-eth1 <<- "EOF"
@@ -25,16 +20,6 @@
 # ONBOOT="yes"
 # TYPE="Ethernet"
 # EOF
-
-
-# Update Host
-# sudo yum -y update
-
-# Install GIT
-sudo yum install git
-
-# Git working repository
-wget https://github.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS
 
 # Install Docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh

@@ -14,8 +14,8 @@ This class is focused on the F5 Automation Toolchain and has been created to int
 
 Composable infrastructure provides the mechanism to create reusable items, with small reusable items we can create more frequent changes gaining better agility and controlled fault domains.
 
-- F5 ToolChain (Overview)
-        - 99 Balloons (Module 1) 
+- Priming the Environment
+        - Lab Setup (Module 1) 
 - F5 Declarative Onboarding (Presentation)
         - F5 Declarative Onboarding (Module 2)
 - F5 Application Services 3 (Presentation)
