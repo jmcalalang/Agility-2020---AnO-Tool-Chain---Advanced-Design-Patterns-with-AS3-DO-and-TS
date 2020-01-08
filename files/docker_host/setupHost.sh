@@ -19,7 +19,7 @@
 # Install Docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
-sudo systemctl start docker
+sudo systemctl enable docker
 sudo service docker start
 sudo usermod -aG docker cloud-user
 echo -e "Default \e[34mDocker installed\e[0m"
