@@ -19,6 +19,7 @@ Telemetry Streaming (TS) is an iControl LX Extension delivered as a TMOS-indepen
   - ElasticSearch
   - Sumo Logic
   - StatsD
+  - Generic HTTP (Used for F5 Cloud Service Analytics "Beacon")
 
 .. Topic:: Lab Directive
 
@@ -29,7 +30,9 @@ Telemetry Streaming (TS) is an iControl LX Extension delivered as a TMOS-indepen
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to install the TS package and send a declaration to a single BIG-IP. 
+BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we going to install the TS package and send a declaration to a single BIG-IP. 
+
+..Note:: In a normal environment you should install the TS package on all BIG-IP units.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -91,27 +94,11 @@ Declaration for BIGIP1:
 
 Copy **all of** the below TS declaration.
 
-.. literalinclude :: ../module5/ansible/roles/telemetry_streaming/files/ts_kafka.json
+.. literalinclude :: ../module5/ansible/roles/telemetry_streaming/files/ts_beacon.json
    :language: json
 
+
 Task |labmodule|\.\ |labnum|\.6
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-F5 publishes a schema for each of the Automation Toolchain items. This published schema can be used in Visual Studio Code allowing you to see context and find errors within your different declarations. The schema reference is added at the top of your declaration, and requires vscode to know the language is JSON.
-
-.. seealso:: Schema Validation for TS (TS_Schema_)
-
-Open `Visual Studio Code` on your jump host desktop and open a `New File` (shortcut Ctrl+n) and paste in all of the TS declaration contents, then set the language to `JSON`.
-
-  |image8|
-
-Once the declaration and language are defined, you can highlight over sections of the code to see context and errors.
-
-  |image9|
-
-.. note:: You can try misspelling some of the declaration objects to see errors, remember to revert your changes.
-
-Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We now need to send our declaration to BIGIP1.
@@ -126,10 +113,10 @@ Click on step `Step 6: TS Declaration BIGIP1`, navigate to the `Body` tab and pa
 
 The declaration is now on BIGIP1 being processed; this takes a few seconds to process and build out our objects. 
 
-Task |labmodule|\.\ |labnum|\.8
+Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note:: TS consumer with Kafka_ was chosen as an example. Many solutions can consume Kafka Topics, and there are several providers managed Kafka solutions in the ecosystem. There are other examples of consumer types available to TS on the CloudDocs_ which can be used.
+.. Note:: TS consumer with Beacon_ was chosen as an example to highlight the F5 Cloud Service.
 
 There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
 
@@ -158,14 +145,7 @@ This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Tel
    :width: 75%
 .. |image7| image:: images/image7.png
    :width: 75%
-.. |image8| image:: images/image8.png
-   :width: 75%
-.. |image9| image:: images/image9.png
-   :width: 75%
 .. |image10| image:: images/image10.png
    :width: 75%
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/
-.. _TS_Example: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/userguide/setting-up-consumer.html#kafka
-.. _TS_Schema: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/userguide/validate.html#validate
-.. _Kafka: https://kafka.apache.org/

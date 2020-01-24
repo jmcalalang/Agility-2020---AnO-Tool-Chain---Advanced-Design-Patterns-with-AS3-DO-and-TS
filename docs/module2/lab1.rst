@@ -21,15 +21,17 @@ Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using `Chrome` open a tab to each BIG-IP system, they are currently in a default configuration (Expired License, no configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
+Using `Chrome` open the bookmark folder `Automation Toolch...` then open tabs to each BIG-IP system, they are currently in a default configuration (No Configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
 
 .. Note:: This would be the configuration of a new BIG-IP (Virtual or Hardware).
 
-BIG-IP 1 and 2:
-Username: ``admin``
-Password: ``Agility2020!``
+BIGIP01 and BIGIP02:
+- Username: ``admin``
+- Password: ``Agility2020!``
 
-  |image8|
+|image8|
+
+|image24|
 
 Leave the tabs open in Chrome for later.
 
@@ -170,7 +172,7 @@ The last step of Module 2 is to place our declaration on BIGIP2. This declaratio
 
   |image22|
 
-.. Note:: Clustering can take a couple of minutes to sync and establish, this is normal
+.. Warning:: Clustering can take several minutes to sync and establish, this is normal
 
 Return to either BIG-IP TMUI in Chrome and check the cluster configuration and status. Both units are clustered with all onboarding objects, defined from the declaration.
   
@@ -219,6 +221,8 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
 .. |image22| image:: images/image22.png
    :width: 50%
 .. |image23| image:: images/image23.png
+   :width: 50%
+.. |image24| image:: images/image23.png
    :width: 50%
    
 .. _AS3: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/

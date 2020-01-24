@@ -19,14 +19,16 @@ Application Services 3 Extension (referred to as AS3 Extension or more often sim
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to install the AS3 package and send a declaration to a single BIG-IP. 
+BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to send a declaration to a single BIG-IP. 
+
+..Note:: In a real environment you will want to install AS3 on every device, however you do only sent a declartion to a single.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Expand the `Module 3 - AS3 and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions BIGIP1`. This step requests the icontrollx packages already installed on the BIG-IP.
  
-  |image2|
+  |ç|
 
 .. note:: Module2 we installed the DO package, and we can see that installed now
 

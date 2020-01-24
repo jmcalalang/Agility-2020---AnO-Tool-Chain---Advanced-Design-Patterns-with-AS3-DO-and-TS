@@ -16,4 +16,4 @@ servicePort: "8080"
 
 # Used for Telemetry Streaming
 forwarderName: "tsdemo"
-consumerPort: "9092"
+F5BeaconAccessToken: "a-aavdvRoPC5#qmmgf9zZ7nXrLnrppyr1hrpJay4UAKN2EMvZ2rexisU="

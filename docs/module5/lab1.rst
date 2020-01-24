@@ -24,7 +24,7 @@ Task |labmodule|\.\ |labnum|\.1
 
 Ansible Tower utilizing Projects connected to an SCM will parse a GitHub repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in the Project.
 
-Using `Chrome` open a tab to Ansible Tower.
+Using `Chrome` navigate to the `Automation Toolch...` bookmark folder and open a tab to Ansible Tower.
 
 - Ansible Tower User: ``admin``
 - Ansible Tower Password: ``Agility2020!``

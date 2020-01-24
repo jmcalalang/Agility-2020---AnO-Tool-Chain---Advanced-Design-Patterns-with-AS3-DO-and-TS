@@ -1,5 +1,5 @@
-Welcome
--------
+Class: A&O Tool Chain - Advanced Design Patterns with AS3, DO and TS
+--------------------------------------------------------------------
 
 |image1|
 
@@ -24,6 +24,8 @@ Composable infrastructure provides the mechanism to create reusable items, with 
         - F5 Telemetry Streaming (Module 4)
 - CI/CD (Presentation)
         - Ansible Tower (Module 5)
+
+Expected time to complete: **2 hours**
 
 Resources in this lab are documented and released on F5 CloudDocs_. **It is encouraged after the lab to read through these sections for broader learning.**
 
