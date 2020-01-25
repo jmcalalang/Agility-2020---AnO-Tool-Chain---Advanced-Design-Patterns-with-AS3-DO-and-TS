@@ -21,7 +21,7 @@ Task |labmodule|\.\ |labnum|\.1
 
 BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to send a declaration to a single BIG-IP. 
 
-..Note:: In a real environment you will want to install AS3 on every device, however you do only sent a declartion to a single.
+.. Note:: In a real environment you will want to install AS3 on every device, however you do only sent a declartion to a single.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30,7 +30,7 @@ Expand the `Module 3 - AS3 and BIG-IP` tab within the collection and execute `St
  
   |image2|
 
-.. note:: Module2 we installed the DO package, and we can see that installed now
+.. Note:: Module2 we installed the DO package, and we can see that installed now
 
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,7 +145,7 @@ This concludes Module 3 and configuring your application service on BIG-IP with 
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image2| image:: images/image2.png
-   :width: 50%
+   :width: 75%
 .. |image3| image:: images/image3.png
    :width: 75%
 .. |image4| image:: images/image4.png
