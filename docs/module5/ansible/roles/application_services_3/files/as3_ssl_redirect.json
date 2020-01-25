@@ -24,11 +24,12 @@
                     ],
                             "members": [
                                 {
-                                    "servicePort": 8300,
+                                    "servicePort": {{servicePort}},
                                     "addressDiscovery": "consul",
                                     "updateInterval": 10,
-                                    "uri": "http://10.0.3.110:8500/v1/catalog/service/{{partition}}",
-                                    "rejectUnauthorized": false
+                                    "uri": "http://10.1.10.11:8500/v1/catalog/service/{{partition}}_service",
+                                    "rejectUnauthorized": false,
+                                    "addressRealm": "public"
                                 }
                             ]
                 }
@@ -62,11 +63,11 @@
                             "name": "forward_to_pool",
                             "conditions": [
                                 {
-                                    "type": "httpUri",
+                                    "type": "httpHeader",
                                     "path": {
                                         "operand": "contains",
                                         "values": [
-                                            "{{virtualAddresses1}}"
+                                            "/"
                                         ]
                                     }
                                 }

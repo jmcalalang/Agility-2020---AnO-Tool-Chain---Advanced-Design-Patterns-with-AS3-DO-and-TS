@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5686ebb3-e455-47cf-9857-0c6e3d915543",
+		"_postman_id": "690dc31b-4cfb-4053-83a1-1c620f9540bf",
 		"name": "F5 Automation Toolchain: Class",
 		"description": "This class is focused on highlighting the F5 Automation Toolchain objects and their specific uses.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -1727,10 +1727,10 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "Module 5 - CI/CD with Ansible Tower",
+			"name": "Ansible Tower",
 			"item": [
 				{
-					"name": "Automation Toolchain All Builds Template",
+					"name": "Provisioning Tower",
 					"item": [
 						{
 							"name": "Step 1: Modify Ansible Tower License",
@@ -2076,10 +2076,119 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
-				},
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Consul Services",
+			"item": [
 				{
-					"name": "Automation Toolchain Package Install Template",
-					"item": [],
+					"name": "Provisioning Consul",
+					"item": [
+						{
+							"name": "Step 1: Build Module_03 Service and Node",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ServiceID\": \"Module_03_id\",\n    \"ServiceName\": \"Module_03_service\",\n    \"ServiceTags\": [\n        \"Module_03_service\",\n        \"agility2020\"\n    ],\n    \"ServiceEnableTagOverride\": false,\n    \"Node\": \"Module_03_docker_node\",\n    \"Address\": \"10.1.20.11\",\n    \"Port\": 8080,\n    \"Service\": {\n        \"ID\": \"Module_03_id\",\n        \"Service\": \"Module_03_service\",\n        \"Tags\": [\n            \"Module_03_node\",\n            \"agility2020\"\n        ]\n    },\n    \"Check\": {\n        \"Node\": \"Module_03_docker_node\",\n        \"Name\": \"docker_node health check\",\n        \"Notes\": \"Script based health check\",\n        \"Status\": \"passing\",\n        \"ServiceID\": \"Module_03_id\",\n        \"Definition\": {\n            \"TCP\": \"10.1.20.11:8080\",\n            \"Interval\": \"5s\",\n            \"Timeout\": \"1s\",\n            \"DeregisterCriticalServiceAfter\": \"30s\"\n        }\n    }\n}    "
+								},
+								"url": {
+									"raw": "http://10.1.10.11:8500/v1/catalog/register",
+									"protocol": "http",
+									"host": [
+										"10",
+										"1",
+										"10",
+										"11"
+									],
+									"port": "8500",
+									"path": [
+										"v1",
+										"catalog",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Step 2: Build JuiceShop Service and Node",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ServiceID\": \"JuiceShop_id\",\n    \"ServiceName\": \"JuiceShop_service\",\n    \"ServiceTags\": [\n        \"JuiceShop_service\",\n        \"agility2020\"\n    ],\n    \"ServiceEnableTagOverride\": false,\n    \"Node\": \"JuiceShop_docker_node\",\n    \"Address\": \"10.1.20.11\",\n    \"Port\": 8081,\n    \"Service\": {\n        \"ID\": \"JuiceShop_id\",\n        \"Service\": \"JuiceShop_service\",\n        \"Tags\": [\n            \"JuiceShop_node\",\n            \"agility2020\"\n        ]\n    },\n    \"Check\": {\n        \"Node\": \"JuiceShop_docker_node\",\n        \"Name\": \"docker_node health check\",\n        \"Notes\": \"Script based health check\",\n        \"Status\": \"passing\",\n        \"ServiceID\": \"JuiceShop_id\",\n        \"Definition\": {\n            \"TCP\": \"10.1.20.11:8081\",\n            \"Interval\": \"5s\",\n            \"Timeout\": \"1s\",\n            \"DeregisterCriticalServiceAfter\": \"30s\"\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://10.1.10.11:8500/v1/catalog/register",
+									"protocol": "http",
+									"host": [
+										"10",
+										"1",
+										"10",
+										"11"
+									],
+									"port": "8500",
+									"path": [
+										"v1",
+										"catalog",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Step 3: Build GitLab Service and Node",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ServiceID\": \"GitLab_id\",\n    \"ServiceName\": \"GitLab_service\",\n    \"ServiceTags\": [\n        \"GitLab_service\",\n        \"agility2020\"\n    ],\n    \"ServiceEnableTagOverride\": false,\n    \"Node\": \"GitLab_docker_node\",\n    \"Address\": \"10.1.20.11\",\n    \"Port\": 8501,\n    \"Service\": {\n        \"ID\": \"GitLab_id\",\n        \"Service\": \"GitLab_service\",\n        \"Tags\": [\n            \"GitLab_node\",\n            \"agility2020\"\n        ]\n    },\n    \"Check\": {\n        \"Node\": \"GitLab_docker_node\",\n        \"Name\": \"docker_node health check\",\n        \"Notes\": \"Script based health check\",\n        \"Status\": \"passing\",\n        \"ServiceID\": \"GitLab_id\",\n        \"Definition\": {\n            \"TCP\": \"10.1.20.11:8501\",\n            \"Interval\": \"5s\",\n            \"Timeout\": \"1s\",\n            \"DeregisterCriticalServiceAfter\": \"30s\"\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "http://10.1.10.11:8500/v1/catalog/register",
+									"protocol": "http",
+									"host": [
+										"10",
+										"1",
+										"10",
+										"11"
+									],
+									"port": "8500",
+									"path": [
+										"v1",
+										"catalog",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				}
