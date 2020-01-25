@@ -102,17 +102,17 @@ The environment is now ready to be used.
 .. |image1| image:: images/image1.png
    :width: 200px
 .. |image2| image:: images/image2.png
-   :width: 100%
+   :width: 80%
 .. |image3| image:: images/image3.png
-   :width: 50%
+   :width: 75%
 .. |image4| image:: images/image4.png
-   :width: 25%
-.. |image5| image:: images/image5.png
-   :width: 25%
-.. |image6| image:: images/image6.png
-   :width: 25%
-.. |image7| image:: images/image7.png
    :width: 50%
+.. |image5| image:: images/image5.png
+   :width: 50%
+.. |image6| image:: images/image6.png
+   :width: 50%
+.. |image7| image:: images/image7.png
+   :width: 75%
    
 .. _vscode: https://code.visualstudio.com/
 .. _Postman: https://www.getpostman.com

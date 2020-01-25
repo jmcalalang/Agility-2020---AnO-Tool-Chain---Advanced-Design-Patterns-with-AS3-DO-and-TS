@@ -14,6 +14,25 @@
         },
         "{{partition}}": {
             "class": "Tenant",
+            "Shared": {
+                "class": "Application",
+                "template": "shared",
+                "{{partition}}_dual_pool": {
+                    "class": "Pool",
+                    "monitors": [
+                        "http"
+                    ],
+                            "members": [
+                                {
+                                    "servicePort": 8300,
+                                    "addressDiscovery": "consul",
+                                    "updateInterval": 10,
+                                    "uri": "http://10.0.3.110:8500/v1/catalog/service/{{partition}}",
+                                    "rejectUnauthorized": false
+                                }
+                            ]
+                }
+            },
             "A1": {
                 "class": "Application",
                 "template": "http",
@@ -22,22 +41,7 @@
                     "virtualAddresses": [
                         "{{virtualAddresses1}}"
                     ],
-                    "pool": "http_pool"
-                },
-                "http_pool": {
-                    "class": "Pool",
-                    "monitors": [
-                        "http"
-                    ],
-                    "members": [
-                        {
-                            "servicePort": {{servicePort}},
-                            "serverAddresses": [
-                                "10.1.20.11"
-                            ],
-                            "shareNodes": true
-                        }
-                    ]
+                    "pool": "/{{partition}}/Shared/{{partition}}_dual_pool"
                 }
             },
             "A2": {
@@ -48,26 +52,43 @@
                     "virtualAddresses": [
                         "{{virtualAddresses2}}"
                     ],
-                    "pool": "https_pool",
-                    "profileTrafficLog": {
-                        "use": "trafLogProf"
-                    },
+                    "policyEndpoint": "forward_policy",
                     "serverTLS": "webtls"
                 },
-                "https_pool": {
-                    "class": "Pool",
-                    "monitors": [
-                        "http"
-                    ],
-                    "members": [
+                "forward_policy": {
+                    "class": "Endpoint_Policy",
+                    "rules": [
                         {
-                            "servicePort": {{servicePort}},
-                            "serverAddresses": [
-                                "10.1.20.11"
+                            "name": "forward_to_pool",
+                            "conditions": [
+                                {
+                                    "type": "httpUri",
+                                    "path": {
+                                        "operand": "contains",
+                                        "values": [
+                                            "{{virtualAddresses1}}"
+                                        ]
+                                    }
+                                }
                             ],
-                            "shareNodes": true
+                            "actions": [
+                                {
+                                    "type": "forward",
+                                    "event": "request",
+                                    "select": {
+                                        "pool": {
+                                            "use": "/{{partition}}/Shared/{{partition}}_dual_pool"
+                                        }
+                                    }
+                                }
+                            ]
                         }
                     ]
+                },
+                "OWASP_Auto_Tune": {
+                    "class": "WAF_Policy",
+                    "url": "https://raw.githubusercontent.com/f5devcentral/f5-asm-policy-templates/master/owasp_ready_template/owasp-auto-tune-v1.1.xml",
+                    "ignoreChanges": true
                 },
                 "webtls": {
                     "class": "TLS_Server",
@@ -86,57 +107,6 @@
                         "ciphertext": "ZjVmNQ==",
                         "protected": "eyJhbGciOiJkaXIiLCJlbmMiOiJub25lIn0"
                     }
-                },
-                "trafLogProf": {
-                    "class": "Traffic_Log_Profile",
-                    "requestSettings": {
-                        "requestErrorLoggingEnabled": true,
-                        "proxyCloseOnErrorEnabled": true,
-                        "proxyRespondOnLoggingErrorEnabled": true,
-                        "requestErrorProtocol": "mds-tcp",
-                        "requestProtocol": "mds-tcp",
-                        "requestEnabled": true,
-                        "proxyResponse": "Proxy Response",
-                        "requestErrorPool": {
-                            "use": "HSLPool"
-                        },
-                        "requestErrorTemplate": "ERR TEMPLATE:",
-                        "requestPool": {
-                            "use": "HSLPool"
-                        },
-                        "requestTemplate": "event_source=\\\"request_logging\\\",hostname=\\\"$BIGIP_HOSTNAME\\\",client_ip=\\\"$CLIENT_IP\\\",server_ip=\\\"$SERVER_IP\\\",http_method=\\\"$HTTP_METHOD\\\",http_uri=\\\"$HTTP_URI\\\",virtual_name=\\\"$VIRTUAL_NAME\\\""
-                    },
-                    "responseSettings": {
-                        "byDefaultEnabled": false,
-                        "responseErrorLoggingEnabled": true,
-                        "responseErrorProtocol": "mds-tcp",
-                        "responseProtocol": "mds-tcp",
-                        "responseEnabled": true,
-                        "responseErrorPool": {
-                            "use": "HSLPool"
-                        },
-                        "responseErrorTemplate": "ERROR: ",
-                        "responsePool": {
-                            "use": "HSLPool"
-                        },
-                        "responseTemplate": "TEMPLATE"
-                    }
-                },
-                "HSLPool": {
-                    "class": "Pool",
-                    "monitors": [
-                        "tcp"
-                    ],
-                    "members": [
-                        {
-                            "servicePort": 6514,
-                            "serverAddresses": [
-                                "10.1.1.6",
-                                "10.1.1.7"
-                            ],
-                            "shareNodes": true
-                        }
-                    ]
                 }
             }
         }

@@ -19,7 +19,7 @@ Telemetry Streaming (TS) is an iControl LX Extension delivered as a TMOS-indepen
   - ElasticSearch
   - Sumo Logic
   - StatsD
-  - Generic HTTP (Used for F5 Cloud Service Analytics "Beacon")
+  - Generic HTTP (Used for F5 Cloud Service Analytics `Beacon`)
 
 .. Topic:: Lab Directive
 
@@ -32,7 +32,7 @@ Task |labmodule|\.\ |labnum|\.1
 
 BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we going to install the TS package and send a declaration to a single BIG-IP. 
 
-..Note:: In a normal environment you should install the TS package on all BIG-IP units.
+.. Note:: In a normal environment you should install the TS package on all BIG-IP units.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,7 +120,7 @@ Task |labmodule|\.\ |labnum|\.7
 
 There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
 
-.. seealso:: Covering the consumer configuration is not covered in this Module. However, there is an example of this in the ``Extra`` Module of this lab.
+.. seealso:: Covering the consumer configuration is not covered in this Module. However, the instructor has access to the Beacon account we are sending utilizing at can demo this feature,
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 

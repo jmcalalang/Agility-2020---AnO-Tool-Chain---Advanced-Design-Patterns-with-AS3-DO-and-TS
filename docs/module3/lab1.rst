@@ -28,7 +28,7 @@ Task |labmodule|\.\ |labnum|\.2
 
 Expand the `Module 3 - AS3 and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions BIGIP1`. This step requests the icontrollx packages already installed on the BIG-IP.
  
-  |ç|
+  |image2|
 
 .. note:: Module2 we installed the DO package, and we can see that installed now
 

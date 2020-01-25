@@ -179,7 +179,7 @@ This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to cr
 .. |image14| image:: images/image14.png
 .. |image15| image:: images/image15.png
 .. |image16| image:: images/image16.png
-   :width: 50%
+   :width: 100%
 
 .. _Project: https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html
 .. _Template: https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html

@@ -31,8 +31,6 @@ BIGIP01 and BIGIP02:
 
 |image8|
 
-|image24|
-
 Leave the tabs open in Chrome for later.
 
 Task |labmodule|\.\ |labnum|\.2
@@ -203,27 +201,27 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
    :width: 50%
 .. |image13| image:: images/image13.png
 .. |image14| image:: images/image14.png
-   :width: 50%
+   :width: 75%
 .. |image15| image:: images/image15.png
-   :width: 50%
+   :width: 75%
 .. |image16| image:: images/image16.png
-   :width: 50%
+   :width: 75%
 .. |image17| image:: images/image17.png
-   :width: 50%
+   :width: 75%
 .. |image18| image:: images/image18.png
-   :width: 50%
+   :width: 75%
 .. |image19| image:: images/image19.png
-   :width: 50%
+   :width: 75%
 .. |image20| image:: images/image20.png
-   :width: 50%
+   :width: 75%
 .. |image21| image:: images/image21.png
-   :width: 50%
+   :width: 75%
 .. |image22| image:: images/image22.png
-   :width: 50%
+   :width: 75%
 .. |image23| image:: images/image23.png
-   :width: 50%
+   :width: 75%
 .. |image24| image:: images/image23.png
-   :width: 50%
+   :width: 75%
    
 .. _AS3: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 .. _declarative: https://www.f5.com/company/blog/in-container-land-declarative-configuration-is-king
