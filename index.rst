@@ -24,7 +24,9 @@ This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions f
    docs/intro/intro
    docs/labinfo/labinfo*
    docs/postmanDeployment/postmanDeployment*
+   docs/postmanDeployment/module*/module*
    docs/ansibleTowerDeployment/ansibleTowerDeployment*
+   docs/ansibleTowerDeployment/module*/module*
 
 Indices and tables
 ==================
