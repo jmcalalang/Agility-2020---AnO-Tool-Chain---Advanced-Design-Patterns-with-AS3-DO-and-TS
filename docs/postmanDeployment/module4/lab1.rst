@@ -120,7 +120,7 @@ Task |labmodule|\.\ |labnum|\.7
 
 There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
 
-.. seealso:: Covering the consumer configuration is not covered in this Module. However, the instructor has access to the Beacon account we are sending utilizing at can demo this feature,
+.. seealso:: Covering the consumer configuration is not covered in this Module. However, your instructor has access to the Beacon account TS is utilizing, and will highlight the concepts.
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 

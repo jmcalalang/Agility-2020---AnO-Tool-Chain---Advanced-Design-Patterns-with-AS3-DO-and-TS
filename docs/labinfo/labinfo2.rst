@@ -115,8 +115,7 @@ We just registered 3 Services and Nodes into Consul, which were also configured 
 
 .. Note:: We utilized the direct API for Consul to create these objects. This only highlights one option for the Consul registration process; in most environments, devices will self-register with a Consul agent installed. This agent keeps track of the Service it should register into, and as new Nodes come in and out of the Service, Consul keeps the correct state. The BIG-IP via AS3 will check the state of a Service or a Node in Consul to create/update/delete its pool members
 
-
-The environment is now ready to be used.
+Your environment is now ready to be utilized.
 
 .. |labmodule| replace:: labinfo
 .. |labnum| replace:: 2

@@ -5,4 +5,4 @@ This direction of the lab will guide the student down utilizing Ansible Tower as
 
 The ideal student progressing down this path has a deep understanding of the F5 Automation Toolchain, and they are seeking design patterns of placing the ATC in a CI/CD pipeline.
 
-.. Note:: No matter the path chosen in the lab, all students have the same result.
+.. Note:: Reminder, no matter the path chosen in the lab, all students have the same result.

@@ -5,4 +5,4 @@ This direction of the lab will guide the student down utilizing Postman as a RES
 
 The ideal student progressing down this path has some programmability experience to BIG-IP; they have learned the Imperative REST and are seeking a better understanding of the bridge between Imperative and Declarative automation.
 
-.. Note:: No matter the path chosen in the lab, all students have the same result.
+.. Note:: Reminder, no matter the path chosen in the lab, all students have the same result.
