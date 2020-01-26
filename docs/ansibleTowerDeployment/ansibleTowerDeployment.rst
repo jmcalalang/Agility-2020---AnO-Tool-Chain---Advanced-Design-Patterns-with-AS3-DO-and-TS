@@ -11,4 +11,4 @@ The ideal student progressing down this path has a deep understanding of the F5 
    :maxdepth: 1
    :glob:
 
-   lab*
+   module*
