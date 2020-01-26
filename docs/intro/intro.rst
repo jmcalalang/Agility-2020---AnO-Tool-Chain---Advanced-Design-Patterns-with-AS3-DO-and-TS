@@ -1,5 +1,5 @@
-Class: A&O Tool Chain - Advanced Design Patterns with AS3, DO and TS
---------------------------------------------------------------------
+Class
+-----
 
 |image1|
 

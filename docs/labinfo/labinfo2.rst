@@ -1,5 +1,5 @@
-Priming the Environment
-=======================
+Module 1: Priming the Environment
+=================================
 
 |image1| **Environmental Configuration**
 
