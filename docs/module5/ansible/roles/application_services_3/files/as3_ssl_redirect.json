@@ -63,7 +63,7 @@
                             "name": "forward_to_pool",
                             "conditions": [
                                 {
-                                    "type": "httpHeader",
+                                    "type": "httpUri",
                                     "path": {
                                         "operand": "contains",
                                         "values": [
