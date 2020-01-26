@@ -69,17 +69,15 @@ With the AS3 package installed into our cluster, we are ready to submit our firs
 
 The desired end state of this AS3 configurations is to configure the below objects; built on the BIG-IPs with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in source control.
 
-.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs AS3_Example_
+.. seealso:: This AS3 declaration was based from F5 provided examples located on CloudDocs AS3_Example_
 
 Configuration Items in our declaration:
   - Configuration Partition
   - Virtual Server x2
-  - Pool x 2
-  - Pool Member
-  - Certificate
-  - Keys
-  - HSL Logging Pool
-  - Request Logging Profile
+  - Pool with Service Discovery fron HashiCorp Consul
+  - TLS Certificate & Keys
+  - Web Application Firewall Policy from ephemeral URI
+  - Traffic Policy based on URI
 
 Declaration for BIGIP1:
 
