@@ -17,7 +17,7 @@ This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions f
 - Yossi Rosenboim (yossi-r_)
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
    :glob:
 
