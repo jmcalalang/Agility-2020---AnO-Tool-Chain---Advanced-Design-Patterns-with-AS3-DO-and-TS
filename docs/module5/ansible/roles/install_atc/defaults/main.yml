@@ -1,7 +1,7 @@
 # automation toolchain specific parameters
 
 #module parameters
-bigips: [deviceName1, deviceName2]
+bigips: ["{{deviceName1}}", "{{deviceName2}}"]
 bigip_provider:
   server: "{{ item }}"
   user: "{{BIGIPadminUsername}}"
