@@ -97,7 +97,7 @@ This lab heavily utilizes Service Discovery, which handles populating the BIG-IP
 
 HashiCorp Consul is already running within the environment. However, we want to highlight the configuration of Consul to highlight the Role responsibility alignment. Utilizing an ephemeral resource on the BIG-IP allows for better delegation of Roles within an organization. 
 
-Return to Postman and navigate into the ``Consul Services`` > `` Provisioning Consul``.
+Return to Postman and navigate into the ``Consul Services`` > ``Provisioning Consul``.
 
   |image8|
   
