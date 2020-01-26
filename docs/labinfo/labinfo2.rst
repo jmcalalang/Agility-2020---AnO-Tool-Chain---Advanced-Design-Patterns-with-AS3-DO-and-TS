@@ -140,13 +140,13 @@ The environment is now ready to be used.
 .. |image7| image:: images/image7.png
    :width: 100%
 .. |image8| image:: images/image8.png
-   :width: 100%
+   :width: 50%
 .. |image9| image:: images/image9.png
-   :width: 100%
+   :width: 75%
 .. |image10| image:: images/image10.png
-   :width: 100%
+   :width: 75%
 .. |image11| image:: images/image11.png
-   :width: 100%
+   :width: 75%
    
 .. _vscode: https://code.visualstudio.com/
 .. _Postman: https://www.getpostman.com
