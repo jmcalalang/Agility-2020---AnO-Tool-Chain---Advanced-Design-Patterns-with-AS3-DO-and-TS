@@ -55,7 +55,7 @@
     headers:
       X-F5-Auth-Token: "{{ bigip1_auth_token }}"
     method: POST
-    status_code: "200", "202"
+    status_code: "200" or "202"
     url: "https://{{deviceName1}}/mgmt/shared/appsvcs/declare"
     validate_certs: no
     timeout: "60"
