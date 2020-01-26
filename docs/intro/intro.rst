@@ -7,8 +7,8 @@ Welcome to Class!
 
 .. NOTE:: You should have received all your student info to access the lab, if you have not please find an instructor.
 
-Agenda:
--------
+Agenda
+------
 
 This class is focused on the F5 Automation Toolchain and has been created to introduce students to the components and their uses. You should have a basic understanding of BIG-IP technologies and a desire to learn about automation and orchestration.
 
