@@ -17,14 +17,14 @@ This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions f
 - Yossi Rosenboim (yossi-r_)
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
    :glob:
 
    docs/intro/intro
    docs/labinfo/labinfo*
-   docs/postmanDeployment/module*/module*
-   docs/ansibleTowerDeployment/module*/module*
+   docs/postmanDeployment/postmanDeployment*/module*/module*
+   docs/ansibleTowerDeployment/ansibleTowerDeployment*/module*/module*
 
 Indices and tables
 ==================
