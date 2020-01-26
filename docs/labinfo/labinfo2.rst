@@ -90,6 +90,11 @@ Expand the `Authentication` tab within the collection and run (**SEND**) for **a
 
   |image7|
 
+Task |labmodule|\.\ |labnum|\.7
+-------------------------------
+
+This lab heavly utilizes Service Discovery, which handles populating the BIG-IP pool members from an ephemeral resource (HashiCorp consul). In order for our services to be alive and pass traffic, we need to build the Services and Nodes in consul.
+
 The environment is now ready to be used.
 
 .. |labmodule| replace:: labinfo
