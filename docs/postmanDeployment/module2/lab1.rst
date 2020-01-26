@@ -21,7 +21,7 @@ Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using `Chrome` open the bookmark folder `Automation Toolch...` then open tabs to each BIG-IP system, they are currently in a default configuration (No Configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
+Using `Chrome` open the bookmark folder `Automation Toolch.` then open tabs to each BIG-IP system, they are currently in a default configuration (No Configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
 
 .. Note:: This would be the configuration of a new BIG-IP (Virtual or Hardware).
 
@@ -107,7 +107,7 @@ Declaration for BIGIP1:
 
 Copy **all of** the below DO declaration.
 
-.. literalinclude :: ../module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip1.json
+.. literalinclude :: /docs/ansibleTowerDeployment/module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip1.json
    :language: json
 
 Task |labmodule|\.\ |labnum|\.6
@@ -160,7 +160,7 @@ Declaration for BIGIP2:
 
 Copy **all of** the below DO declaration.
 
-.. literalinclude :: ../module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip2.json
+.. literalinclude :: /docs/ansibleTowerDeployment/module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip2.json
    :language: json
 
 Task |labmodule|\.\ |labnum|\.10
