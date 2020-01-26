@@ -10,3 +10,5 @@ The ideal student progressing down this path has a deep understanding of the F5 
 .. toctree::
    :maxdepth: 1
    :glob:
+
+   docs/ansibleTowerDeployment/module*

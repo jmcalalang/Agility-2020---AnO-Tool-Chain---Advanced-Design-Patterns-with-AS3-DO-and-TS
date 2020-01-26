@@ -10,3 +10,5 @@ The ideal student progressing down this path has some programmability experience
 .. toctree::
    :maxdepth: 1
    :glob:
+
+   docs/postmanDeployment/module*
