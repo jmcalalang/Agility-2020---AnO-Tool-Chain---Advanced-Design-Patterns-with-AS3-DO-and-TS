@@ -76,7 +76,7 @@
 
 - name: Wait for Sync to happen or race condition will occur
   pause:
-    seconds: 30
+    seconds: 200
 
 # Device 2
 
@@ -154,4 +154,4 @@
 
 - name: Wait for Sync to happen or race condition will occur
   pause:
-    seconds: 30
+    seconds: 200
