@@ -1,5 +1,5 @@
-Module 1: Priming the Environment
-========================================
+Priming the Environment
+=======================
 
 |image1| **Environmental Configuration**
 
@@ -93,7 +93,28 @@ Expand the `Authentication` tab within the collection and run (**SEND**) for **a
 Task |labmodule|\.\ |labnum|\.7
 -------------------------------
 
-This lab heavly utilizes Service Discovery, which handles populating the BIG-IP pool members from an ephemeral resource (HashiCorp consul). In order for our services to be alive and pass traffic, we need to build the Services and Nodes in consul.
+This lab heavily utilizes Service Discovery, which handles populating the BIG-IP pool members from an ephemeral resource (HashiCorp Consul). For our BIG-IP services to be alive and pass traffic, we need to build the Services and Nodes in Consul.
+
+HashiCorp Consul is already running within the environment. However, we want to highlight the configuration of Consul to highlight the Role responsibility alignment. Utilizing an ephemeral resource on the BIG-IP allows for better delegation of Roles within an organization. 
+
+Return to Postman and navigate into the ``Consul Services`` > `` Provisioning Consul``.
+
+  |image8|
+  
+Start with `Step 1:` and execute each of the three REST requests to the Consul API.
+
+  |image9|
+
+Once you have executed all of the requests, you can validate the configuration is in the Consul UI. From the Chrome browser, open the bookmarks folder for this lab and open the Consul bookmark.
+
+  |image10|
+
+We just registered 3 Services and Nodes into Consul, which were also configured for health checks that Consul performs, all units should show `Green` and alive.
+
+  |image11|
+
+.. Note:: We utilized the direct API for Consul to create these objects. This only highlights one option for the Consul registration process; in most environments, devices will self-register with a Consul agent installed. This agent keeps track of the Service it should register into, and as new Nodes come in and out of the Service, Consul keeps the correct state. The BIG-IP via AS3 will check the state of a Service or a Node in Consul to create/update/delete its pool members
+
 
 The environment is now ready to be used.
 
@@ -117,6 +138,14 @@ The environment is now ready to be used.
 .. |image6| image:: images/image6.png
    :width: 50%
 .. |image7| image:: images/image7.png
+   :width: 100%
+.. |image8| image:: images/image8.png
+   :width: 100%
+.. |image9| image:: images/image9.png
+   :width: 100%
+.. |image10| image:: images/image10.png
+   :width: 100%
+.. |image11| image:: images/image11.png
    :width: 100%
    
 .. _vscode: https://code.visualstudio.com/

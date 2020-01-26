@@ -11,4 +11,4 @@ The ideal student progressing down this path has some programmability experience
    :maxdepth: 1
    :glob:
 
-   module*
+   docs/postmanDeployment/module*
