@@ -14,16 +14,25 @@ This class is focused on the F5 Automation Toolchain and has been created to int
 
 Composable infrastructure provides the mechanism to create reusable items, with small reusable items we can create more frequent changes gaining better agility and controlled fault domains.
 
-- Priming the Environment
-        - Lab Setup (Module 1) 
+All students will experience the same presentations and end solutions in the lab, however, there are two different paths the students can choose to take.
+
 - F5 Declarative Onboarding (Presentation)
-        - F5 Declarative Onboarding (Module 2)
 - F5 Application Services 3 (Presentation)
-        - F5 Application Services 3 (Module 3)
 - F5 Telemetry Streaming (Presentation)
+
+- Priming the Environment
+        - Lab Setup (Module 1)
+
+- Postman Deployment - Option 1
+        - F5 Declarative Onboarding (Module 2)
+        - F5 Application Services 3 (Module 3)
         - F5 Telemetry Streaming (Module 4)
-- CI/CD (Presentation)
-        - Ansible Tower (Module 5)
+
+- Ansible Tower Deployment - Option 2
+        - Configuring Ansible Tower
+        - F5 Declarative Onboarding Playbook (Module 2)
+        - F5 Application Services 3 Playbook (Module 2)
+        - F5 Telemetry Streaming Playbook (Module 2)
 
 Expected time to complete: **2 hours**
 

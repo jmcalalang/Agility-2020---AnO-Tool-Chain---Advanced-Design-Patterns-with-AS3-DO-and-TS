@@ -1,10 +1,10 @@
-Module |labmodule|\, Lab \ |labnum|\: CI/CD with Ansible Tower
+Module |labmodule|\, Lab \ |labnum|\: CI with Ansible Tower
 ==============================================================
 
 Lab scenario:
 ~~~~~~~~~~~~~
 
-|image1| Ansible Tower
+|image1|
 
 F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where systems with proper testing can progress from Continuous Delivery to Continuous Deployment.
 
@@ -17,12 +17,46 @@ Objects highlighted in this module.
 
 The entirety of this lab is in Source Control, with different tools using different parts. Postman imported our collection directly from Source Control, the documentation and configuration examples are also pulled from the same source, giving a real example of `Source-of-Truth`. We are now going to integrate Module 5 of this lab into Ansible Tower.
 
+Our BIG-IP units are in a non-configured default state, there is **no license, networking, accounts, or service configurations**. Before beginning the labs below, log in to the BIG-IP units and follow along as parts of the lab are being built out.
+
+    Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to Ansible Tower.
+
+    - Ansible Tower User: ``admin``
+    - Ansible Tower Password: ``Agility2020!``
+
+  |image20|    
+
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Ansible Tower is **already** installed and configured, ready to be executed. The Postman Collection for this lab also contains the Ansible Tower configuration located in the `Module 5 - CI/CD with Ansible Tower` selection.
+Similar to the configuration of HashiCorp Consul at the beginning of the lab, Ansible Tower need to be configured for use. Within the Postman collection for the lab is an Ansible Tower folder containing all the pieces needed to make Tower functional. 
 
-Ansible Tower utilizing Projects connected to an SCM will parse a GitHub repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in the Project.
+.. Note:: If you would like to see the state of Tower before sending in the configurtion, log in with the credentials below.
+
+    Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to Ansible Tower.
+
+    - Ansible Tower User: ``admin``
+    - Ansible Tower Password: ``Agility2020!``
+
+From Postman, expand the ``Ansible Tower > Provisioning Tower`` folder. 
+
+  |image17|
+
+Select ``Step 1: Modify. . .`` and Send the request to Ansible tower.
+
+  |image18|
+
+After you have sent in the first request, proceed with sending in **all** the requests, ending with ``Step 9: Create. . .``
+
+.. Note:: This collection of calls to Ansible Tower will License the product, create our Project, Inventory, Host, and a number of templates each designed around our declarations for F5 Declarative Onboarding, Application Services 3 and Telemetry Streaming.
+
+.. Warning:: There is a template designed which will building everything in the lab, this is placed here to show a full end to end solution, however if executed you would be done in 12 minutes missing out in all the fun.
+
+Task |labmodule|\.\ |labnum|\.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Ansible Tower utilizing Projects connected to an SCM will parse a Source Control repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in the Project.
 
 Using `Chrome` navigate to the `Automation Toolch...` bookmark folder and open a tab to Ansible Tower.
 
@@ -31,12 +65,14 @@ Using `Chrome` navigate to the `Automation Toolch...` bookmark folder and open a
 
   |image3|
 
-Task |labmodule|\.\ |labnum|\.2
+Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Updating Ansible Tower from Source Control.
+Ansible Tower version is `Tower 3.6.1` Ansible Version is `Ansible 2.9.2`.
 
-.. note: Ansible Tower version is `Tower 3.4.2` Ansible Version is `Ansible 2.7.9`.
+  |image19|
+
+Updating Ansible Tower from Source Control.
 
 Navigate to `Projects`.
 
@@ -50,11 +86,11 @@ The project pulls in its configuration from GitHub, and the `SCM URL` is the rep
 
   |image6|
 
-The repository for this lab is public, ansible.cfg instructs Ansible Tower where it needs to lookup Ansible specific object (Roles and Playbooks)
+The repository for this lab is public_, ansible.cfg instructs Ansible Tower where it needs to lookup Ansible specific object (Roles and Playbooks)
 
   |image7|
 
-Return to the `Projects` Tab. We need to update our Ansible Tower from Source Control, as our source goes through changes we want to make sure whatever we are working with is the most current.
+Return to the `Projects` Tab and scroll to the bottom of the page. We need to update our Ansible Tower from Source Control, as our source goes through changes we want to make sure whatever we are working with is the most current.
 
 ``Update`` from source by clicking on the loop icon. 
 
@@ -68,90 +104,8 @@ Navigating into the Job exposes the tasks and console of how the job performed.
 
   |image10|
 
-Task |labmodule|\.\ |labnum|\.3
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Execute a pipeline for BIG-IP configuration as code.
-
-Navigate to `Templates`.
-
-  |image11|
-
-Navigate to the `f5_automation_toolchain_template`.
-
-The Template is wrapped around our previously created Project, within the Template is where we organize and define the resources needed to run the Ansible Job.
-
-In this Template we are going to use:
-
-- Our Project imported from SCM `f5_automation_toolchain_project`
-- Our Inventory (localhost) as our Ansible target
-- A playbook located at `docs/module5/ansible/playbooks/full_build.yml`
-- Extra Variables
-
-  |image12|
-
-Extra Variables include:
-
-.. literalinclude :: files/f5_automation_toolchain_template_extra_variables.yml
-   :language: yaml
-
-.. Note:: There are other Playbooks in this SCM repository. Specifically, there is one for each of our Automation Toolchain objects and the full_build. The full_build runs all the roles for each of the Automation Toolchain objects together.
-
-Return to the `Templates` Tab. We are going to deploy our Template which stitches together all our objects and runs against our BIG-IPs.
-
-``Deploy`` the Template by clicking the Deploy icon.
-
-  |image13|
-
-The Template deploys all the code we have used previously in modules 2-4. However, because the Automation Toolchain objects are idempotent, no change is enacted on the BIG-IPs. 
-
-  |image14|
-
-Reviewing the Playbook execution we can see some testing and error handling that has been built into the tasks. The BIG-IP(s) are verified to be accessable, and then the endpoints for each of the Automation Toolchain item is verified up and available. This order makes use of good Just-In-Time (JIT) delivery and concepts for automation practices.
-
-.. Note:: At this point, we have progressed into a solution that could be Continuously Delivered. 
-
-Task |labmodule|\.\ |labnum|\.4
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Mutation of objects and creating reusable items.
-
-Template systems with single configuration files can lead to many **Snow-Flake** configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how an AS3 solution could be reused, we are going to change some of the extra variables in our Template creating additional services. 
-
-This lab is currently running 4 different applications. Through this point of the lab, we have been exposing the `NGiNX` application; we are now going to use the same template to deploy services to expose the `JuiceShop` and `GitLab` applications.
-
-This Table represents the applications and extra variables we will use to create our additional deployments.
-
-+--------------------+-----------+-------------------+-------------------+-------------+
-| **serviceName**    | partition | virtualAddresses1 | virtualAddresses2 | servicePort |
-+--------------------+-----------+-------------------+-------------------+-------------+
-| **Module_03**      | Module_03 | 10.1.10.110       | 10.1.10.111       | 8080        |
-+--------------------+-----------+-------------------+-------------------+-------------+
-| **JuiceShop**      | JuiceShop | 10.1.10.112       | 10.1.10.113       | 8081        |
-+--------------------+-----------+-------------------+-------------------+-------------+
-| **GitLab**         | GitLab    | 10.1.10.114       | 10.1.10.115       | 8501        |
-+--------------------+-----------+-------------------+-------------------+-------------+
-
-Return to the `f5_automation_toolchain_template` in Ansible Tower.
-
-Located at the bottom of the template are the extra variables, **manipulate the extra variables** with the values from the table above to deploy one of our additional applications.
-
-  |image15|
-
-.. note:: The template is defaulted to run the **full_build.yml** playbook, if you want to save time you can set this to the **application_services_3.yml**.
-
-Save the Template with your new variables and playbook defined, then re-run the template.
-
-  |image13|
-
-Return to one of the BIG-IPs and see the culmination of all the services deployed.
-
-  |image16|
-
-This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to create reusable items.
-
-
-.. |labmodule| replace:: 5
+.. |labmodule| replace:: 2
 .. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
 .. |labund| replace:: |labmodule|\ _\ |labnum|
@@ -172,14 +126,9 @@ This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to cr
 .. |image8| image:: images/image8.png
 .. |image9| image:: images/image9.png
 .. |image10| image:: images/image10.png
-.. |image11| image:: images/image11.png
-.. |image12| image:: images/image12.png
-   :width: 80%
-.. |image13| image:: images/image13.png
-.. |image14| image:: images/image14.png
-.. |image15| image:: images/image15.png
-.. |image16| image:: images/image16.png
-   :width: 100%
+.. |image17| image:: images/image17.png
+.. |image18| image:: images/image18.png
+.. |image19| image:: images/image19.png
+.. |image20| image:: images/image20.png
 
 .. _Project: https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html
-.. _Template: https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html

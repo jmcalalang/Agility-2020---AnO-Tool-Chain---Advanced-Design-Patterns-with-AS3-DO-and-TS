@@ -12,9 +12,7 @@ A declarative model means you provide a JSON declaration rather than a set of im
 
 Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be used for configuration adherence, making sure system settings like DNS, NTP and user accounts state is always configured correctly.
 
-.. Topic:: Lab Directive
-
-    This lab uses a Declarative Onboarding declaration to build out two BIG-IP units.
+This lab uses a Declarative Onboarding declaration to build out two BIG-IP clusterd units.
 
 .. seealso:: DO CloudDocs_ Page
 
