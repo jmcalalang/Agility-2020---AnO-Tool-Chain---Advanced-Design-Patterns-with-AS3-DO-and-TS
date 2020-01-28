@@ -67,4 +67,3 @@ There is no configuration within the BIG-IP TMUI to show. The TS declaration uti
 .. |image31| image:: images/image31.png
    :width: 75%
 .. |image32| image:: images/image32.png
-   :width: 75%

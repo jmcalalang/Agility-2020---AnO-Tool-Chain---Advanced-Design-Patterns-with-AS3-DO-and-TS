@@ -119,6 +119,8 @@ Task |labmodule|\.\ |labnum|\.7
 
 There is no configuration within the BIG-IP TMUI to show. The TS declaration utilizes an API token to allow the BIG-IP to self-register with F5 Cloud Service Beacon. The TS **Poller** polls the BIG-IP for tmstat information, and harvests the names of all service level objects (VIPs, Pools, iRules, etc.) and sends it out to Beacon.
 
+  |image11|
+
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 
 .. |labmodule| replace:: 4
@@ -144,5 +146,6 @@ This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Tel
    :width: 75%
 .. |image10| image:: images/image10.png
    :width: 75%
+.. |image11| image:: images/image11.png
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/

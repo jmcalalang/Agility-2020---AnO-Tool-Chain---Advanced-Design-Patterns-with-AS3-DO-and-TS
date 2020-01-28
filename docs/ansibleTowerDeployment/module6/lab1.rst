@@ -4,7 +4,7 @@ Module |labmodule|\, Lab \ |labnum|\: Automation Toolchain Template
 Lab scenario:
 ~~~~~~~~~~~~~
 
-The Automation Toolchain is an extension of the BIG-IP platform. It needs to be installed before it can be executed. This template will install the Automation Toolchain to a list of BIG-IP's contained in this lab. The underlying Ansible role as the ability to Pinto a specific version of the Toolchain or always installs the latest.
+The Automation Toolchain is an extension of the BIG-IP platform. It needs to be installed before it can be executed. This template will install the Automation Toolchain to a list of BIG-IPs contained in this lab. The underlying Ansible role as the ability to Pinto a specific version of the Toolchain or always installs the latest.
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

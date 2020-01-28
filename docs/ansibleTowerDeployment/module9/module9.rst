@@ -1,4 +1,4 @@
-Module 8: Telemetry Streaming Template
+Module 9: Telemetry Streaming Template
 ======================================
 
 .. toctree::
