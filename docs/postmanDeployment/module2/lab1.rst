@@ -8,18 +8,18 @@ Introduction:
 
 F5 Declarative Onboarding (DO) uses a declarative_ model to initially configure a BIG-IP device with all of the required settings to get up and ready, this includes system settings such as licensing and provisioning, network settings such as VLANs and Self IPs, and clustering settings if you are using more than one BIG-IP system. 
 
-A declarative model means you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which Declarative Onboarding is responsible for creating on a BIG-IP system. You send a declaration file using a single Rest API call.
+A declarative model means you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration that Declarative Onboarding is responsible for creating on a BIG-IP system. You send a declaration file using a single Rest API call.
 
-Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be used for configuration adherence, making sure system settings like DNS, NTP and user accounts state is always configured correctly.
+Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be used for configuration adherence, making sure system settings like DNS, NTP, and user accounts state is always configured correctly.
 
-This lab uses a Declarative Onboarding declaration to build out two BIG-IP clusterd units.
+This lab uses a Declarative Onboarding declaration to build out two BIG-IP clustered units.
 
 .. seealso:: DO CloudDocs_ Page
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using `Chrome` open the bookmark folder `Automation Toolch.` then open tabs to each BIG-IP system, they are currently in a default configuration (No Configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
+Using `Chrome` open the bookmark folder `Automation Toolch.` then open tabs to each BIG-IP system, they are currently in a default configuration (No Configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept the configuration. 
 
 .. Note:: This would be the configuration of a new BIG-IP (Virtual or Hardware).
 
@@ -36,7 +36,7 @@ Task |labmodule|\.\ |labnum|\.2
 
 F5 Declarative Onboarding is an iControlLX_ package, which needs to be installed on the BIG-IP or API Services Gateway before use. After DO is installed, we interact with it through a REST verb to configure our BIG-IP(s).
 
-.. seealso:: The iControl LX extension allows you to use Node.js to extend the REST API on any BIG-IP. You can write an iControl LX extension to implement your REST API using JavaScript to represent the URI resources (nouns) that you can then invoke in a RESTful manner. The REST verb handlers can then perform appropriate actions local to the F5 devices or across the distributed data center. An iControl LX extension is an extensibility point attached to a specific URI, enabling customer-provided JavaScript/Node.js code to run in the context of the BIG-IP/iWorkflow control plane extending the REST API with additional services. You can extend existing F5 REST APIs as well as convert your services into multiple extensions that run on F5s control plane.
+.. seealso:: The iControl LX extension allows you to use Node.js to extend the REST API on any BIG-IP. You can write an iControl LX extension to implement your REST API using JavaScript to represent the URI resources (nouns) that you can then invoke in a RESTful manner. The REST verb handlers can then perform appropriate actions local to the F5 devices or across the distributed data center. An iControl LX extension is an extensibility point attached to a specific URI, enabling customer-provided JavaScript/Node.js code to run in the context of the BIG-IP/iWorkflow control plane extending the REST API with additional services. You can extend existing F5 REST APIs as well as convert your services into multiple extensions that run on the F5s control plane.
 
 Expand the `Module 2 - DO and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions BIGIP1`. This step requests the icontrollx packages already installed on the BIG-IP.
 
@@ -51,7 +51,7 @@ Task |labmodule|\.\ |labnum|\.3
 
 An icontrollx package can be installed via the BIG-IP API, or through the TMUI, we are going to install this through the API with `Step 2: Upload DO Extension RPM BIGIP1`.
 
-Installing the rpm package through the API with Postman requires a few variables in the collection which have already been set on your behalf (size of package and name). However you need to select the package to be installed, these have been downloaded for you and are in the `Downloads` folder of your jump host.
+Installing the rpm package through the API with Postman requires a few variables in the collection which have already been set on your behalf (size of package and name). However, you need to select the package to be installed, these have been downloaded for you and are in the `Downloads` folder of your jump host.
 
 Select the Declarative Onboarding rpm file for this Step
 
@@ -87,7 +87,7 @@ Task |labmodule|\.\ |labnum|\.5
 
 With the DO package installed on the BIGIP1, we are ready to build out our first BIG-IP. 
 
-The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in Source Control.
+The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs, with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in Source Control.
 
 .. seealso:: This DO declaration was created from an F5 provided example located on CloudDocs DO_Example_
 
@@ -111,7 +111,7 @@ Copy **all of** the below DO declaration.
 Task |labmodule|\.\ |labnum|\.6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F5 publishes a schema for each of the Automation Toolchain items. This published schema can be used in Visual Studio Code allowing you to see context and find errors within your different declarations. The schema reference is added at the top of your declaration, and requires vscode to know the language is JSON.
+F5 publishes a schema for each of the Automation Toolchain items. This published schema can be used in Visual Studio Code, allowing you to see context and find errors within your different declarations. The schema reference is added at the top of your declaration, and requires vscode to know the language is JSON.
 
 .. seealso:: Schema Validation for Declarative Onboarding (DO_Schema_)
 
@@ -128,9 +128,9 @@ Once the declaration and language are set, you can highlight over sections of th
 Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We now need to send our declaration to BIGIP1; this is the first member of our cluster and the one our second BIG-IP pulls its configuration. 
+We now need to send our declaration to BIGIP1; this is the first member of our cluster, and the one our second BIG-IP pulls its configuration. 
 
-Click on step `Step 6: DO Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declaration, and send the call. 
+Click on step `Step 6: DO Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declarations, and send the call. 
 
   |image20|
 
@@ -148,9 +148,9 @@ Return to your BIGIP1 TMUI in Chrome; you can now navigate around the UI and see
 Task |labmodule|\.\ |labnum|\.9
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Building out BIGIP2 is going to be similar. However, the declaration is slightly different, BIGIP1 and BIGIP2 have some device specific items, like Self-IPs. These small differences are prime examples of solutions that templatize exceptionally well. We could have used Parameters in Postman or other templating tools that an Orchestrator may provide (like Jinja2 in Ansible).
+Building out BIGIP2 is going to be similar. However, the declaration is slightly different; BIGIP1 and BIGIP2 have some device-specific items, like Self-IPs. These small differences are prime examples of solutions that templatize exceptionally well. We could have used Parameters in Postman or other templating tools that an Orchestrator may provide (like Jinja2 in Ansible).
 
-.. Note:: iControlLX packages are device configuration objects that sync across clustered BIG-IP, however since we are creating our cluster with DO we need to install it on BIGIP2 as well.
+.. Note:: iControlLX packages are device configuration objects that sync across clustered BIG-IP, however since we are creating our cluster with DO, we need to install it on BIGIP2 as well.
 
 Progress through **Module 2 Postman Steps 7-11**, remember to select your file for the upload step.
 

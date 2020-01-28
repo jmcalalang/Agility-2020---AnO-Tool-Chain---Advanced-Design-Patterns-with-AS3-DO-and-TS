@@ -8,7 +8,7 @@ Lab scenario:
 
 F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where systems with proper testing can progress from Continuous Delivery to Continuous Deployment.
 
-Ansible Tower is being utilized in this lab to show the possibility of an orchestration engine with capabilities for large scale deployments. Tower has many features which will not be covered in this lab; however, two concepts that **are** covered are `Projects` and `Templates`.
+Ansible Tower is being utilized in this lab to show the possibility of an orchestration engine with capabilities for large scale deployments. Tower has many features that will not be covered in this lab; however, two concepts that **are** covered are `Projects` and `Templates`.
 
 Objects highlighted in this module.
 
@@ -17,7 +17,7 @@ Objects highlighted in this module.
 
 The entirety of this lab is in Source Control, with different tools using different parts. Postman imported our collection directly from Source Control, the documentation and configuration examples are also pulled from the same source, giving a real example of `Source-of-Truth`. We are now going to integrate Module 5 of this lab into Ansible Tower.
 
-Our BIG-IP units are in a non-configured default state, there is **no license, networking, accounts, or service configurations**. Before beginning the labs below, log in to the BIG-IP units and follow along as parts of the lab are being built out.
+Our BIG-IP units are in a non-configured default state. There is **no license, networking, accounts, or service configurations**. Before beginning the labs below, log in to the BIG-IP units and follow along as parts of the lab are being built out.
 
     Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to each BIG-IP.
 
@@ -35,7 +35,7 @@ Task |labmodule|\.\ |labnum|\.1
 
 Similar to the configuration of HashiCorp Consul at the beginning of the lab, Ansible Tower need to be configured for use. Within the Postman collection for the lab is an Ansible Tower folder containing all the pieces needed to make Tower functional. 
 
-.. Note:: If you would like to see the state of Tower before sending in the configurtion, log in with the credentials below.
+.. Note:: If you would like to see the state of Tower before sending in the configuration, log in with the credentials below.
 
     Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to Ansible Tower.
 
@@ -52,9 +52,9 @@ Select ``Step 1: Modify. . .`` and Send the request to Ansible tower.
 
 After you have sent in the first request, proceed with sending in **all** the requests, ending with ``Step 9: Create. . .``
 
-.. Note:: This collection of calls to Ansible Tower will License the product, create our Project, Inventory, Host, and a number of templates each designed around our declarations for F5 Declarative Onboarding, Application Services 3 and Telemetry Streaming.
+.. Note:: This collection of calls to Ansible Tower will License the product, create our Project, Inventory, Host, and several templates each designed around our declarations for F5 Declarative Onboarding, Application Services 3 and Telemetry Streaming.
 
-.. Warning:: There is a template designed which will building everything in the lab, this is placed here to show a full end to end solution, however if executed you would be done in 12 minutes missing out in all the fun.
+.. Warning:: There is a template designed which will build everything in the lab, this is placed here to show a full end to end solution, however, if executed you would be done in 12 minutes missing out in all the fun.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

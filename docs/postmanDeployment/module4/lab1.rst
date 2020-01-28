@@ -30,9 +30,9 @@ Telemetry Streaming (TS) is an iControl LX Extension delivered as a TMOS-indepen
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we going to install the TS package and send a declaration to a single BIG-IP. 
+BIGIP1 and BIGIP2 are in a cluster that shares configuration objects. As configuration objects are in sync, we going to install the TS package and send a declaration to a single BIG-IP. 
 
-.. Note:: In a normal environment you should install the TS package on all BIG-IP units.
+.. Note:: In a typical environment, you should install the TS package on all BIG-IP units.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,7 +79,7 @@ Task |labmodule|\.\ |labnum|\.5
 
 With the TS package installed into our cluster, we are ready to submit our forwarder configuration.
 
-The desired end state of this TS configurations is to configure the below objects; built on the BIG-IPs with a single call in a single file. TS similar to DO may not be a configuration that is altered very often, however having a defined single file setup can help unify system settings on multiple BIG-IPs.
+The desired end state of this TS configurations is to configure the below objects, built on the BIG-IPs, with a single call in a single file. TS similar to DO may not be a configuration that is altered very often, however having a defined single file setup can help unify system settings on multiple BIG-IPs.
 
 .. seealso:: This TS declaration was created from an F5 provided example located on CloudDocs TS_Example_
 
@@ -102,9 +102,9 @@ Task |labmodule|\.\ |labnum|\.6
 
 We now need to send our declaration to BIGIP1.
 
-.. Note:: Because we are sending our TS declaration into a BIG-IP cluster, just like AS3 we only need to send this to one unit.
+.. Note:: Because we are sending our TS declaration into a BIG-IP cluster, just like AS3, we only need to send this to one unit.
 
-Click on step `Step 6: TS Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declaration, and send the call. 
+Click on step `Step 6: TS Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declarations, and send the call. 
 
   |image10|
 
@@ -115,9 +115,9 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note:: TS consumer with Beacon_ was chosen as an example to highlight the F5 Cloud Service and a rapid deployment.
+.. Note:: TS consumer with Beacon_ was chosen as an example to highlight the F5 Cloud Service and rapid deployment.
 
-There is no configuration within the BIG-IP TMUI to show. The TS declaration utilizes an API token to allow the BIG-IP to self-register with F5 Cloud Service Beacon. The TS **Poller** polls the BIG-IP for tmstat information, and harvests the names of all service level objects (VIPs, Pools, iRules, etc) and sends it out to Beacon.
+There is no configuration within the BIG-IP TMUI to show. The TS declaration utilizes an API token to allow the BIG-IP to self-register with F5 Cloud Service Beacon. The TS **Poller** polls the BIG-IP for tmstat information, and harvests the names of all service level objects (VIPs, Pools, iRules, etc.) and sends it out to Beacon.
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 

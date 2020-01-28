@@ -3,7 +3,7 @@ Lab Information
 
 Access into the lab environment and all work are through the **Win 10 Jumphost** jump host provided. 
 
-.. Warning:: You need to have outbound access from your system allowing Microsoft Remote Desktop Protocol.
+.. Warning:: You need to have outbound access from your system, allowing Microsoft Remote Desktop Protocol.
 
 Lab Topology
 ------------
@@ -22,7 +22,7 @@ Lab Topology
 Network Addressing
 ------------------
 
-The following table lists VLANS, IP Addresses and Credentials for all
+The following table lists VLANS, IP Addresses, and Credentials for all
 components:
 
 .. list-table:: Lab Components
@@ -76,9 +76,9 @@ components:
      - admin/Agility2020!
        root/Agility2020!
 
-.. Note:: In order for Postman to store objects dynamically f5-postman-workflows_ have been installed on the jumphost, this is an extension to Postman utilizing `Tests` objects.
+.. Note:: For Postman to store objects dynamically f5-postman-workflows_ have been installed on the jumphost, this is an extension to Postman utilizing `Tests` objects.
 
-.. Note:: The Automation Toolchain packages have been downloaded and stored in the jump host, this is done to reduce the time to deployment.
+.. Note:: The Automation Toolchain packages have been downloaded and stored in the jump host. This is done to reduce the time to deployment.
 
 .. |labmodule| replace:: labinfo
 .. |labnum| replace:: 1

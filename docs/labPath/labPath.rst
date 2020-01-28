@@ -1,9 +1,9 @@
 Lab Pathways
 ============
 
-.. Warning:: Please wait for your instructors instruction on the pathways.
+.. Warning:: Please wait for the instructors instruction on the pathways.
 
-This Lab has ``two`` pathways to completion.
+This lab has ``two`` pathways to completion.
 
   - **Postman Deployment**
   - **Ansible Tower Deployment**

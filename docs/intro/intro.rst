@@ -5,16 +5,16 @@ Class
 
 Welcome to Class!
 
-.. NOTE:: You should have received all your student info to access the lab, if you have not please find an instructor.
+.. NOTE:: You should have received all your student info to access the lab; if you have not, please find an instructor.
 
 Agenda
 ------
 
-This class is focused on the F5 Automation Toolchain and has been created to introduce students to the components and their uses. You should have a basic understanding of BIG-IP technologies and a desire to learn about automation and orchestration.
+This class is focused on the F5 Automation Toolchain. It has been created to introduce students to the components and their uses. You should have a basic understanding of BIG-IP technologies and a desire to learn about automation and orchestration.
 
-Composable infrastructure provides the mechanism to create reusable items, with small reusable items we can create more frequent changes gaining better agility and controlled fault domains.
+Composable infrastructure provides the mechanism to create reusable items. With small reusable items, we can create more frequent changes gaining better agility and controlled fault domains.
 
-All students will experience the same presentations and end solutions in the lab, however, there are two different paths the students can choose to take.
+All students will experience the same presentations and end solutions in the lab. However, there are two different paths the students can choose to take.
 
 - F5 Declarative Onboarding (Presentation)
 - F5 Application Services 3 (Presentation)

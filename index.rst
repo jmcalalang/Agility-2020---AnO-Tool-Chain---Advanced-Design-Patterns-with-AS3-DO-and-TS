@@ -18,6 +18,7 @@ This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions f
 
    docs/intro/intro
    docs/labinfo/labinfo*
+   docs/labinfo/module* 
    docs/labPath/labPath*
    docs/postmanDeployment/postmanDeployment*
    docs/postmanDeployment/module*/module*

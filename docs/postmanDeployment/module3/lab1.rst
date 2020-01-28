@@ -8,7 +8,7 @@ Introduction:
 
   |image11|
 
-Application Services 3 Extension (referred to as AS3 Extension or more often simply AS3) is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which AS3 is responsible for creating on a BIG-IP system. AS3 is well-defined according to the rules of JSON Schema, and declarations validate according to JSON Schema. AS3 accepts declaration updates via REST (push), reference (pull), or CLI (flat file editing).
+Application Services 3 Extension (referred to as AS3 Extension or, more often merely AS3) is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which AS3 is responsible for creating on a BIG-IP system. AS3 is well-defined according to the rules of JSON Schema, and declarations validate according to JSON Schema. AS3 accepts declaration updates via REST (push), reference (pull), or CLI (flat-file editing).
 
 This lab uses an AS3 declaration to build out our BIG-IP Application Configuration.
 
@@ -17,9 +17,9 @@ This lab uses an AS3 declaration to build out our BIG-IP Application Configurati
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to send a declaration to a single BIG-IP. 
+BIGIP1 and BIGIP2 are in a cluster that shares configuration objects. As configuration objects are in sync, we only need to send a declaration to a single BIG-IP. 
 
-.. Note:: In a real environment you will want to install AS3 on every device, however you do only sent a declartion to a single.
+.. Note:: In a real environment, you will want to install AS3 on every device. However, you do only sent a declaration to a single.
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,7 +35,7 @@ Task |labmodule|\.\ |labnum|\.3
 
 Installation of the AS3 package is the same process we experienced installing DO. We upload the file, install the package, then send a declaration for AS3 to consume.
 
-Open step `Step 2: Upload AS3 Extension RPM`, select the AS3 rpm file and then execute.
+Open step `Step 2: Upload AS3 Extension RPM`, select the AS3 rpm file, and then execute.
 
   |image3|
 
@@ -65,14 +65,14 @@ Task |labmodule|\.\ |labnum|\.5
 
 With the AS3 package installed into our cluster, we are ready to submit our first application service declaration. 
 
-The desired end state of this AS3 configurations is to configure the below objects; built on the BIG-IPs with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in source control.
+The desired end state of this AS3 configurations is to configure the below objects, built on the BIG-IPs, with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in source control.
 
 .. seealso:: This AS3 declaration was based from F5 provided examples located on CloudDocs AS3_Example_
 
 Configuration Items in our declaration:
   - Configuration Partition
   - Virtual Server x2
-  - Pool with Service Discovery fron HashiCorp Consul
+  - Pool with Service Discovery from HashiCorp Consul
   - TLS Certificate & Keys
   - Web Application Firewall Policy from ephemeral URI
   - Traffic Policy based on URI
@@ -87,7 +87,7 @@ Copy **all of** the below AS3 declaration.
 Task |labmodule|\.\ |labnum|\.6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-F5 publishes a schema for each of the Automation Toolchain items. This published schema can be used in Visual Studio Code allowing you to see context and find errors within your different declarations. The schema reference is added at the top of your declaration, and requires vscode to know the language is JSON.
+F5 publishes a schema for each of the Automation Toolchain items. This published schema can be used in Visual Studio Code, allowing you to see context and find errors within your different declarations. The schema reference is added at the top of your declaration, and requires vscode to know the language is JSON.
 
 .. seealso:: Schema Validation for AS3 (AS3_Schema_)
 
@@ -108,7 +108,7 @@ We now need to send our declaration to BIGIP1.
 
 .. Note:: Because we are sending our AS3 declaration into a BIG-IP cluster, we only need to send this to one unit.
 
-Click on step `Step 6: AS3 Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declaration, and send the call. 
+Click on step `Step 6: AS3 Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declarations, and send the call. 
 
   |image9|
 
@@ -121,15 +121,15 @@ Task |labmodule|\.\ |labnum|\.8
 
 .. Note: This example was chosen as an everyday use case. However, AS3 has been extended to include many BIG-IP objects, including security modules, FQDN, Service Discovery, and many more features. Examples of those configurations can be found on CloudDocs_ and used in this lab.
 
-.. warning:: While looking for your AS3 created objects make sure you choose to view your partition individually, or All Read Only.
+.. warning:: While looking for your AS3 created objects, make sure you choose to view your partition individually, or All Read Only.
 
-Return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the created objects from our declaration. 
+Please return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the created objects from our declaration. 
   
   |image10|
 
 .. seealso:: AS3 creates a partition for which it controls; this is defined in the declaration. There are many benefits to this design, small fault domain, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_.
 
-The Service can be viewed in Chrome from either from the IP address, or the Bookmark in the Lab folder and selecting ``Module_03``
+The Service can be viewed in Chrome from either from the IP address or the Bookmark in the Lab folder and selecting ``Module_03``.
 
   |image12| 
 

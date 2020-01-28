@@ -6,7 +6,7 @@ Module 1: Priming the Environment
 Lab Setup:
 ----------
 
-Our lab environment utilizes a jump host with Postman for the Modules. In the steps below we set up the environment ready and able for the lab.
+Our lab environment utilizes a jump host with Postman for the Modules. In the steps below, we set up the environment ready and able for the lab.
 
 Task |labmodule|\.\ |labnum|\.1
 -------------------------------
@@ -15,19 +15,19 @@ Task |labmodule|\.\ |labnum|\.1
 
 Begin by connecting to your lab environment portal. From the portal, you have a view of the components within the lab.
 
-From the portal find your `Win 10 Jumphost`, open using the RDP Access method.
+From the portal, find your `Win 10 Jumphost`, open using the RDP Access method.
 
 .. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources. RDP can be blocked with always-on VPN services or firewalls.
 
 Credentials for the `Win 10 Jumphost`:
 
-- Username:``student``
-- Password:``automation``
+- Username: ``student``
+- Password: ``automation``
 
 Task |labmodule|\.\ |labnum|\.2
 -------------------------------
 
-Familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
+Please familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
 
   |image2|
 
@@ -40,7 +40,7 @@ The following tools are used in this lab:
 Task |labmodule|\.\ |labnum|\.3
 -------------------------------
 
-Open up Postman and import the collection needed for this Lab. This collection configuration is used for this module and modules to follow.
+Open up Postman and import the collection needed for this lab. This collection configuration is used for this module and modules to follow.
   
   |image3|
 
@@ -55,7 +55,7 @@ Copy the collection path and import into Postman:
 Task |labmodule|\.\ |labnum|\.4
 -------------------------------
 
-Open up Postman and import the environment needed for this Lab. This environment configuration is used for this module and modules to follow.
+Open up Postman and import the environment needed for this lab. This environment configuration is used for this module and modules to follow.
   
   |image3|
 
@@ -113,7 +113,7 @@ We just registered 3 Services and Nodes into Consul, which were also configured 
 
   |image11|
 
-.. Note:: We utilized the direct API for Consul to create these objects. This only highlights one option for the Consul registration process; in most environments, devices will self-register with a Consul agent installed. This agent keeps track of the Service it should register into, and as new Nodes come in and out of the Service, Consul keeps the correct state. The BIG-IP via AS3 will check the state of a Service or a Node in Consul to create/update/delete its pool members
+.. Note:: We utilized the direct API for Consul to create these objects. This only highlights one option for the Consul registration process; in most environments, devices will self-register with a Consul agent installed. This agent keeps track of the Service it should register into, and as new Nodes come in and out of the Service, Consul keeps the correct state. The BIG-IP via AS3 will check the state of a Service or a Node in Consul to create/update/delete its pool members.
 
 Your environment is now ready to be utilized.
 
