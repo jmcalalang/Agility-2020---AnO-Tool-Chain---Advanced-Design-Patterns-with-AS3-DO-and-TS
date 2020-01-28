@@ -10,9 +10,7 @@ Introduction:
 
 Application Services 3 Extension (referred to as AS3 Extension or more often simply AS3) is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which AS3 is responsible for creating on a BIG-IP system. AS3 is well-defined according to the rules of JSON Schema, and declarations validate according to JSON Schema. AS3 accepts declaration updates via REST (push), reference (pull), or CLI (flat file editing).
 
-.. Topic:: Lab Directive
-
-    This lab uses an AS3 declaration to build out our BIG-IP Application Configuration.
+This lab uses an AS3 declaration to build out our BIG-IP Application Configuration.
 
 .. seealso:: AS3 CloudDocs_ Page
 
@@ -131,6 +129,10 @@ Return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the created
 
 .. seealso:: AS3 creates a partition for which it controls; this is defined in the declaration. There are many benefits to this design, small fault domain, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_.
 
+The Service can be viewed in Chrome from either from the IP address, or the Bookmark in the Lab folder and selecting ``Module_03``
+
+  |image12| 
+
 This concludes Module 3 and configuring your application service on BIG-IP with F5 AS3.
 
 .. |labmodule| replace:: 3
@@ -161,6 +163,8 @@ This concludes Module 3 and configuring your application service on BIG-IP with 
 .. |image10| image:: images/image10.png
    :width: 75%
 .. |image11| image:: images/image11.png
+.. |image12| image:: images/image12.png
+   :width: 75%
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 .. _AS3_Example: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/http-services.html#http-and-https-virtual-services-in-one-declaration

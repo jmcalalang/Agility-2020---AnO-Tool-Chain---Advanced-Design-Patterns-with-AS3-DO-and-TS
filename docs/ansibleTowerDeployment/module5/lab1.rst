@@ -1,5 +1,5 @@
 Module |labmodule|\, Lab \ |labnum|\: CI with Ansible Tower
-==============================================================
+===========================================================
 
 Lab scenario:
 ~~~~~~~~~~~~~
@@ -19,12 +19,16 @@ The entirety of this lab is in Source Control, with different tools using differ
 
 Our BIG-IP units are in a non-configured default state, there is **no license, networking, accounts, or service configurations**. Before beginning the labs below, log in to the BIG-IP units and follow along as parts of the lab are being built out.
 
-    Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to Ansible Tower.
+    Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to each BIG-IP.
 
     - Ansible Tower User: ``admin``
     - Ansible Tower Password: ``Agility2020!``
 
-  |image20|    
+  |image20|
+
+BIG-IP State:
+
+  |image24|    
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,7 +109,7 @@ Navigating into the Job exposes the tasks and console of how the job performed.
   |image10|
 
 
-.. |labmodule| replace:: 2
+.. |labmodule| replace:: 5
 .. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
 .. |labund| replace:: |labmodule|\ _\ |labnum|
@@ -114,7 +118,6 @@ Navigating into the Job exposes the tasks and console of how the job performed.
 
 .. |image1| image:: images/image1.png
    :width: 200px
-.. |image2| image:: images/image2.png
 .. |image3| image:: images/image3.png
    :width: 70%
 .. |image4| image:: images/image4.png
@@ -130,5 +133,6 @@ Navigating into the Job exposes the tasks and console of how the job performed.
 .. |image18| image:: images/image18.png
 .. |image19| image:: images/image19.png
 .. |image20| image:: images/image20.png
+.. |image24| image:: images/image24.png
 
 .. _Project: https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html

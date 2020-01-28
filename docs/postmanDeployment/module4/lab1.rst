@@ -85,7 +85,6 @@ The desired end state of this TS configurations is to configure the below object
 
 Configuration Items in our declaration:
   - Poller
-  - Listener
   - Consumer
 
 TS is a newer concept for BIG-IP; it is a normalization engine (formatting), a polling engine, and a push mechanism for BIG-IP stats. Getting this information pushed off the box is better for performance then polling, and the depth of different consumer types allows teams to receive information on Application Performance Monitoring (APM) or SIEM of their choosing.
@@ -116,11 +115,9 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note:: TS consumer with Beacon_ was chosen as an example to highlight the F5 Cloud Service.
+.. Note:: TS consumer with Beacon_ was chosen as an example to highlight the F5 Cloud Service and a rapid deployment.
 
-There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
-
-.. seealso:: Covering the consumer configuration is not covered in this Module. However, your instructor has access to the Beacon account TS is utilizing, and will highlight the concepts.
+There is no configuration within the BIG-IP TMUI to show. The TS declaration utilizes an API token to allow the BIG-IP to self-register with F5 Cloud Service Beacon. The TS **Poller** polls the BIG-IP for tmstat information, and harvests the names of all service level objects (VIPs, Pools, iRules, etc) and sends it out to Beacon.
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 

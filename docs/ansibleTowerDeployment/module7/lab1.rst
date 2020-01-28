@@ -1,5 +1,5 @@
-Module |labmodule|\, Lab \ |labnum|\: CI/CD with Ansible Tower
-==============================================================
+Module |labmodule|\, Lab \ |labnum|\: Declarative Onboarding Template
+=====================================================================
 
 Lab scenario:
 ~~~~~~~~~~~~~
@@ -37,26 +37,36 @@ Configuration Items in our declaration:
   - Vlans
   - Clustering
 
-Declaration for BIGIP1:
-
-Copy **all of** the below DO declaration.
+Ansible literal configuration file for review:
 
 .. literalinclude :: /docs/ansibleTowerDeployment/module5/ansible/roles/declarative_onboarding/tasks/main.yml
    :language: yaml
 
-Reviewing the Playbook execution we can see some testing and error handling that has been built into the tasks. The BIG-IP(s) are verified to be accessable, and then the packages for each of the Automation Toolchain items are installed. This order makes use of good Just-In-Time (JIT) delivery and concepts for automation practices.
+Reviewing the Playbook execution we can see some testing and error handling that has been built into the tasks. The BIG-IP(s) are verified to be accessable, and then Declarative Onboarding is verified installed and ready. 
 
-.. Warning:: If at anypoint a Job fails and is not Successful, just re-run the job, all the tool are built around Atomic and Idempotent best practices. Only changes that need to be done are completed, and if a failure happens all configuration is reverted. This is one of the many benefits around utilizing correctly built Ansible Modules.
+  |image22|
 
-.. |labmodule| replace:: 2
-.. |labnum| replace:: 2
+.. Note:: This template is executing against two BIG-IP units and takes longer then any of the other templates, there are a few pausing sections in the playbook to handle the clustering. 
+
+Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to each BIG-IP.
+
+  - Ansible Tower User: ``admin``
+  - Ansible Tower Password: ``Agility2020!``
+
+After the configuration has been sent to our BIG-IP units all DO objects should be complete and installed. At this point we have a cluster of BIG-IP units ready to take on Service configuration.
+
+  |image25|
+  |image23|
+
+
+.. |labmodule| replace:: 7
+.. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
 
-.. |image11| image:: images/image11.png
-.. |image12| image:: images/image12.png
-   :width: 80%
-.. |image13| image:: images/image13.png
-.. |image14| image:: images/image14.png
+.. |image21| image:: images/image21.png
+.. |image22| image:: images/image22.png
+.. |image23| image:: images/image23.png
+.. |image25| image:: images/image25.png
