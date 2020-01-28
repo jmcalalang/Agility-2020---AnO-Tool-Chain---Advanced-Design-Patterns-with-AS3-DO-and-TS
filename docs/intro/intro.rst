@@ -1,6 +1,3 @@
-Class
------
-
 |image1|
 
 Welcome to Class!
