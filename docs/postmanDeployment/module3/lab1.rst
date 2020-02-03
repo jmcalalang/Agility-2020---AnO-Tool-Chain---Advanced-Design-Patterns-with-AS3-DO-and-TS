@@ -164,7 +164,7 @@ This concludes Module 3 and configuring your application service on BIG-IP with 
    :width: 75%
 .. |image11| image:: images/image11.png
 .. |image12| image:: images/image12.png
-   :width: 75%
+   :width: 50%
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 .. _AS3_Example: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/http-services.html#http-and-https-virtual-services-in-one-declaration

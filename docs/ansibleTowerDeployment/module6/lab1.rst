@@ -44,6 +44,7 @@ Ansible literal configuration file for review:
 .. |labnameund| replace:: Lab\ |labund|
 
 .. |image11| image:: images/image11.png
+   :width: 80%
 .. |image12| image:: images/image12.png
    :width: 80%
 .. |image13| image:: images/image13.png

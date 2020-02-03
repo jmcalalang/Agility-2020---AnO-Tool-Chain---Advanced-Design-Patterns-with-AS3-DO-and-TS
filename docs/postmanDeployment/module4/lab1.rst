@@ -123,6 +123,8 @@ There is no configuration within the BIG-IP TMUI to show. The TS declaration uti
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 
+.. Warning:: This concludes the Postman Deployment Option of this lab, lab complete!
+
 .. |labmodule| replace:: 4
 .. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
@@ -148,4 +150,6 @@ This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Tel
    :width: 75%
 .. |image11| image:: images/image11.png
 
+.. _Beacon: https://www.f5.com/products/beacon-visibility-and-analytics
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/
+.. _TS_Example: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/declarations.html

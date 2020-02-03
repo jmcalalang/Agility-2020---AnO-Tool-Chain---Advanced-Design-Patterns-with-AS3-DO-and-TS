@@ -55,6 +55,8 @@ There is no configuration within the BIG-IP TMUI to show. The TS declaration uti
 
   |image32|
 
+.. Warning:: This concludes the Ansible Tower Deployment Option of this lab, lab complete!
+
 .. |labmodule| replace:: 9
 .. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|

@@ -133,11 +133,11 @@ Your environment is now ready to be utilized.
 .. |image3| image:: images/image3.png
    :width: 75%
 .. |image4| image:: images/image4.png
-   :width: 50%
+   :width: 30%
 .. |image5| image:: images/image5.png
    :width: 50%
 .. |image6| image:: images/image6.png
-   :width: 50%
+   :width: 30%
 .. |image7| image:: images/image7.png
    :width: 100%
 .. |image8| image:: images/image8.png

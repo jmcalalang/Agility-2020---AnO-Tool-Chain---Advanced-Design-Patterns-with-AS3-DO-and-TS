@@ -26,10 +26,11 @@ All students will experience the same presentations and end solutions in the lab
         - F5 Telemetry Streaming (Module 4)
 
 - Ansible Tower Deployment - Option 2
-        - Configuring Ansible Tower
-        - F5 Declarative Onboarding Playbook (Module 2)
-        - F5 Application Services 3 Playbook (Module 2)
-        - F5 Telemetry Streaming Playbook (Module 2)
+        - Configuring Ansible Tower (Module 5)
+        - F5 ATC Installation Playbook (Module 6)
+        - F5 Declarative Onboarding Playbook (Module 7)
+        - F5 Application Services 3 Playbook (Module 8)
+        - F5 Telemetry Streaming Playbook (Module 9)
 
 Expected time to complete: **2 hours**
 

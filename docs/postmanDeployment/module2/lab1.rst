@@ -27,7 +27,7 @@ BIGIP01 and BIGIP02:
 - Username: ``admin``
 - Password: ``Agility2020!``
 
-|image8|
+  |image8|
 
 Leave the tabs open in Chrome for later.
 
