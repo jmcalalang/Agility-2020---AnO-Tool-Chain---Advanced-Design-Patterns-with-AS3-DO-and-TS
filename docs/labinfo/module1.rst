@@ -75,10 +75,10 @@ Task |labmodule|\.\ |labnum|\.5
 
 **Verify and set** both the collection and the environment are imported into Postman.
 
-Collection:
+Environment:
   |image5|
 
-Environment:
+Collection:
   |image6|
 
 Task |labmodule|\.\ |labnum|\.6
@@ -135,7 +135,7 @@ Your environment is now ready to be utilized.
 .. |image4| image:: images/image4.png
    :width: 30%
 .. |image5| image:: images/image5.png
-   :width: 50%
+   :width: 30%
 .. |image6| image:: images/image6.png
    :width: 30%
 .. |image7| image:: images/image7.png
