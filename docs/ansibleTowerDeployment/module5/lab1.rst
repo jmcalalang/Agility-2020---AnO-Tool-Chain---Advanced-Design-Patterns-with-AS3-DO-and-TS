@@ -136,3 +136,4 @@ Navigating into the Job exposes the tasks and console of how the job performed.
 .. |image24| image:: images/image24.png
 
 .. _Project: https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html
+.. _public: https://github.com/jmcalalang/Agility-2020---AnO-Tool-Chain---Advanced-Design-Patterns-with-AS3-DO-and-TS
