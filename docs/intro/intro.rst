@@ -36,7 +36,7 @@ Expected time to complete: **2 hours**
 
 Resources in this lab are documented and released on F5 CloudDocs_. **It is encouraged after the lab to read through these sections for broader learning.**
 
-F5 provides a formal series of labs focusing on the enablement of engineers looking to interact with BIG-IP products programmatically. The Super-NetOps_ program is free and self-service open to anyone.
+F5 provides a formal series of labs focusing on the enablement of engineers looking to interact with BIG-IP products programmatically. The Super-NetOps_ program is free, self-service, and open to anyone.
 
 .. |image1| image:: images/image1.png
 
