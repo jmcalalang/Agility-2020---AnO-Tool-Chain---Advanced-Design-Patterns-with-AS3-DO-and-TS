@@ -1,19 +1,19 @@
 Module 1: Priming the Environment
 =================================
 
-|image1| 
+|image1|
 
 **Environmental Configuration**
 
 Lab Setup:
 ----------
 
-Our lab environment utilizes a jump host with Postman for the Modules. In the steps below, we set up the environment ready and able for the lab.
+Our lab environment utilizes a jump host with Postman for the Modules. In the steps below, we set up the environment for the lab.
 
 Task |labmodule|\.\ |labnum|\.1
 -------------------------------
 
-.. NOTE:: You should have received all your student info to access the lab if you have not, please find an instructor.
+.. NOTE:: You should have received all your student info to access the lab. If you have not, please find an instructor.
 
 Begin by connecting to your lab environment portal. From the portal, you have a view of the components within the lab.
 
@@ -29,7 +29,7 @@ Credentials for the `Win 10 Jumphost`:
 Task |labmodule|\.\ |labnum|\.2
 -------------------------------
 
-Please familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
+Please familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host.
 
   |image2|
 
@@ -43,7 +43,7 @@ Task |labmodule|\.\ |labnum|\.3
 -------------------------------
 
 Open up Postman and import the collection needed for this lab. This collection configuration is used for this module and modules to follow.
-  
+
   |image3|
 
 Choose `Import from Link`:
@@ -58,7 +58,7 @@ Task |labmodule|\.\ |labnum|\.4
 -------------------------------
 
 Open up Postman and import the environment needed for this lab. This environment configuration is used for this module and modules to follow.
-  
+
   |image3|
 
 Choose `Import from Link`:
@@ -73,7 +73,7 @@ Copy the environment path and import into Postman:
 Task |labmodule|\.\ |labnum|\.5
 -------------------------------
 
-**Verify and set** both the collection and the environment are imported into Postman.
+**Verify and set** both the collection and the environment previously imported into Postman in steps 2.3 and 2.4.
 
 Environment:
   |image5|
@@ -84,7 +84,7 @@ Collection:
 Task |labmodule|\.\ |labnum|\.6
 -------------------------------
 
-We are going to set some authentication tokens for use throughout this lab. 
+We are going to set some authentication tokens for use throughout this lab.
 
 .. Note:: F5 BIG-IP authentication token last a maximum of 10 hours
 
@@ -97,12 +97,12 @@ Task |labmodule|\.\ |labnum|\.7
 
 This lab heavily utilizes Service Discovery, which handles populating the BIG-IP pool members from an ephemeral resource (HashiCorp Consul). For our BIG-IP services to be alive and pass traffic, we need to build the Services and Nodes in Consul.
 
-HashiCorp Consul is already running within the environment. However, we want to highlight the configuration of Consul to highlight the Role responsibility alignment. Utilizing an ephemeral resource on the BIG-IP allows for better delegation of Roles within an organization. 
+HashiCorp Consul is already running within the environment. However, we want to highlight the configuration of Consul to highlight the Role responsibility alignment. Utilizing an ephemeral resource on the BIG-IP allows for better delegation of Roles within an organization.
 
 Return to Postman and navigate into the ``Consul Services`` > ``Provisioning Consul``.
 
   |image8|
-  
+
 Start with `Step 1:` and execute each of the three REST requests to the Consul API.
 
   |image9|
@@ -148,7 +148,7 @@ Your environment is now ready to be utilized.
    :width: 75%
 .. |image11| image:: images/image11.png
    :width: 75%
-   
+
 .. _vscode: https://code.visualstudio.com/
 .. _Postman: https://www.getpostman.com
 .. _Chrome: https://www.google.com/chrome/

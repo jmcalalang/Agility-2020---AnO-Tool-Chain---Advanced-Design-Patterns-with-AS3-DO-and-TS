@@ -13,36 +13,36 @@ Ansible Tower is being utilized in this lab to show the possibility of an orches
 Objects highlighted in this module.
 
  - A Project_ is a logical collection of Ansible playbooks, represented in Tower.
- - A job Template_ is a definition and set of parameters for running an Ansible job.
+ - A job Template is a definition and set of parameters for running an Ansible job.
 
 The entirety of this lab is in Source Control, with different tools using different parts. Postman imported our collection directly from Source Control, the documentation and configuration examples are also pulled from the same source, giving a real example of `Source-of-Truth`. We are now going to integrate Module 5 of this lab into Ansible Tower.
 
 Our BIG-IP units are in a non-configured default state. There is **no license, networking, accounts, or service configurations**. Before beginning the labs below, log in to the BIG-IP units and follow along as parts of the lab are being built out.
 
-    Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to each BIG-IP.
+    Using `Chrome` navigate to the ``Automation Toolch. . .`` bookmark folder and open a tab to each BIG-IP.
 
-    - Ansible Tower User: ``admin``
-    - Ansible Tower Password: ``Agility2020!``
+    - BIG-IP User: ``admin``
+    - BIG-IP Password: ``Agility2020!``
 
   |image20|
 
 BIG-IP State:
 
-  |image24|    
+  |image24|
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Similar to the configuration of HashiCorp Consul at the beginning of the lab, Ansible Tower need to be configured for use. Within the Postman collection for the lab is an Ansible Tower folder containing all the pieces needed to make Tower functional. 
+Similar to the configuration of HashiCorp Consul at the beginning of the lab, Ansible Tower need to be configured for use. Within the Postman collection for the lab is an Ansible Tower folder containing all the pieces needed to make Tower functional.
 
 .. Note:: If you would like to see the state of Tower before sending in the configuration, log in with the credentials below.
 
-    Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to Ansible Tower.
+    Using `Chrome` navigate to the ``Automation Toolch. . .`` bookmark folder and open a tab to Ansible Tower.
 
     - Ansible Tower User: ``admin``
     - Ansible Tower Password: ``Agility2020!``
 
-From Postman, expand the ``Ansible Tower > Provisioning Tower`` folder. 
+From Postman, expand the ``Ansible Tower > Provisioning Tower`` folder.
 
   |image17|
 
@@ -96,7 +96,7 @@ The repository for this lab is public_, ansible.cfg instructs Ansible Tower wher
 
 Return to the `Projects` Tab and scroll to the bottom of the page. We need to update our Ansible Tower from Source Control, as our source goes through changes we want to make sure whatever we are working with is the most current.
 
-``Update`` from source by clicking on the loop icon. 
+``Update`` from source by clicking on the loop icon.
 
   |image8|
 

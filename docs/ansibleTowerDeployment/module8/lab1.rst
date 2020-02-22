@@ -36,18 +36,18 @@ Ansible literal configuration file for review:
 .. literalinclude :: /docs/ansibleTowerDeployment/module5/ansible/roles/application_services_3/tasks/main.yml
    :language: yaml
 
-Reviewing the Playbook execution, we can see some testing and error handling that has been built into the tasks. The BIG-IP(s) are verified to be accessible, and then Declarative Onboarding is verified installed and ready. 
+Reviewing the Playbook execution, we can see some testing and error handling that has been built into the tasks. The BIG-IP(s) are verified to be accessible, and then Declarative Onboarding is verified installed and ready.
 
   |image27|
 
 .. Note:: This template is executing against one BIG-IP because we have a cluster of units, the design of this template is to show the complexity that you can create with AS3, yet the simplicity of a single declarative declaration.
 
-Using `Chrome` navigate to the `Automation Toolch. . .` bookmark folder and open a tab to each BIG-IP.
+Using `Chrome` navigate to the ``Automation Toolch. . .`` bookmark folder and open a tab to each BIG-IP.
 
-  - Ansible Tower User: ``admin``
-  - Ansible Tower Password: ``Agility2020!``
+  - BIG-IP User: ``admin``
+  - BIG-IP Password: ``Agility2020!``
 
-After the configuration has been sent to our BIG-IP units, all AS3 objects should be complete and installed. At this point, we have a service that is available and ready on the BIG-IPs. 
+After the configuration has been sent to our BIG-IP units, all AS3 objects should be complete and installed. At this point, we have a service that is available and ready on the BIG-IPs.
 
   |image28|
 

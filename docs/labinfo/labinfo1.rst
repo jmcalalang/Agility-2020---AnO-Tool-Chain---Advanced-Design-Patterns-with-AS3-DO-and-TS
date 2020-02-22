@@ -1,7 +1,7 @@
 Lab Information
 ===============
 
-Access into the lab environment and all work are through the **Win 10 Jumphost** jump host provided. 
+Access into the lab environment and all work will be performed through the **Win 10 Jumphost**.
 
 .. Warning:: You need to have outbound access from your system, allowing Microsoft Remote Desktop Protocol.
 
