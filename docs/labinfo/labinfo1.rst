@@ -48,7 +48,7 @@ components:
 
    * - Ansible Tower
      - 10.1.1.8
-     - **External:** 10.1.10.12
+     - **External:** NA
        **Internal:** NA
      - admin/Agility2020!
 
